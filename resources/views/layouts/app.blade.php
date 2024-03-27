@@ -1242,19 +1242,18 @@
               <li class="submenu">
                 <a href="#">
                   <i class='fas fa-chalkboard-teacher'></i>
-                  <span> Sections</span>
+                  <span>Departments</span>
                   <span class="menu-arrow"></span>
                 </a>
                 <ul>
                   <li>
-                    <a href="projects.html">Morning Section </a>
+                    <a href="{{url('department')}}"> All Deprtments</a>
                   </li>
                   <li>
-                    <a href="tasks.html">Evening Section</a>
+                    <a href="{{url('department/create')}}"> Add Department</a>
                   </li>
-                  <li>
-                    <a href="task-board.html">Timning</a>
-                  </li>
+                  
+                  
                 </ul>
               </li>
               <li class="submenu">
@@ -1265,11 +1264,12 @@
                 </a>
                 <ul>
                   <li>
-                    <a href="tickets.html">Start Year</a>
+                    <a href="{{url('session')}}"> All Sessions</a>
                   </li>
                   <li>
-                    <a href="ticket-details.html">End YEAR</a>
+                    <a href="tickets.html">Add Session</a>
                   </li>
+                  
                 </ul>
               </li>
               

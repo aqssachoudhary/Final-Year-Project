@@ -30,6 +30,11 @@ Route::post('teacher','TeacherController@store');
 Route::get('student','StudentController@index');
 Route::get('student/create','StudentController@create');
 Route::post('student','StudentController@store');
-
+//departments
+Route::get('department','DepartmentController@index');
+Route::get('department/create','DepartmentController@create');
+Route::post('department','DepartmentController@store');
+//sessions
+Route::get('session','SessionController@index');
 
 

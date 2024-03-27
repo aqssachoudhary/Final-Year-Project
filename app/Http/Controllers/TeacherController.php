@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Teacher;
+use App\Models\User;
+use Hash;
+use Spatie\Permission\Models\Role;
 
 class TeacherController extends Controller
 {
     public function index()
 
-    { $teachers=Teacher::get();
+    { $teachers=User::role('Teacher')->get();
         return view('teachers.index',compact('teachers'));
     }
     public function create()
@@ -19,18 +21,19 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         
-        $teacher= new Teacher;
+        $teacher= new User;
         
         $teacher->first_name=$request->fname;
         $teacher->last_name=$request->lname;
-         $teacher->username=$request->lname;
          $teacher->email=$request->email;
-          $teacher->password=$request->password;
-            $teacher->confirm_password=$request->cnfrm_password;
+          $teacher->password=Hash::make($request->password);
         $teacher->phone=$request->mobile;
-         $teacher->department=$request->department;
+         $teacher->department_id=(int)$request->department;
          
          $teacher->save();
+
+          $customerRole = Role::where('name', 'Teacher')->first();
+        $teacher->assignRole($customerRole);
          return redirect('teacher')->with('success','Record Added');
     
     }

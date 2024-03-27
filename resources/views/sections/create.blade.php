@@ -3,376 +3,58 @@
 @section('content')
 
 <div class="page-wrapper">
+    <div class="content container-fluid pb-0">
 
-<div class="content container-fluid pb-0">
-
-<div class="page-header">
-<div class="row align-items-center">
-<div class="col">
-<h3 class="page-title">Students</h3>
-<ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
-<li class="breadcrumb-item active">Students</li>
-</ul>
-</div>
-<div class="col-auto float-end ms-auto">
-<a href="{{url('student/create')}}" class="btn add-btn" ><i class="fa-solid fa-plus"></i> Add Students</a>
-
-</div>
-</div>
-
-
-</div>
-
-@foreach ($students as $student)
-<div class="row staff-grid-row ">
-<div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3 d-flex">
-<div class="profile-widget w-100">
-<div class="profile-img">
-<a href="client-profile.html" class="avatar"><img src="assets/img/profiles/avatar-13.jpg" alt="User Image"></a>
-</div>
-<div class="dropdown profile-action">
-<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-<div class="dropdown-menu dropdown-menu-right">
-<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_client"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_client"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-</div>
-</div>
-<h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">{{$student->first_name}}</a></h4>
-<h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">{{$student->last_name}}</a></h5>
-<div class="small text-muted">CEO</div>
-<a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-<a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
-</div>
-</div>
-</div>
-
-@endforeach
-
-
-<div id="add_client" class="modal custom-modal fade" role="dialog">
-<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 <div class="modal-content">
-	<div class="modal-header">
-<h5 class="modal-title">Add Client</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
+        <div class="modal-header">
+<h5 class="modal-title">Add Department</h5></div>
 
-
-<div class="modal-body">
-<form method="post">
-	@csrf
+<div class="modal-body card p-4">
+<form method="post" action="{{url('department')}}">
+    @csrf
 <div class="row">
-<div class="col-md-6">
+<div class="col-sm-4">
 <div class="input-block mb-3">
-<label class="col-form-label">First Name <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="fname">
+<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
+<input class="form-control" type="text" name="name">
 </div>
 </div>
-<div class="col-md-6">
+
+<div class="col-sm-4">
 <div class="input-block mb-3">
-<label class="col-form-label">Last Name</label>
-<input class="form-control" type="text"name="lname ">
+<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
+<input class="form-control" type="text" name=""> 
 </div>
 </div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Username <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="username">
-</div>
-</div>
-<div class="col-md-6">
+<div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">Email <span class="text-danger">*</span></label>
-<input class="form-control floating" type="email" name="email">
+<input class="form-control" type="email" name="email">
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">Password</label>
 <input class="form-control" type="password" name="password">
 </div>
 </div>
+
 <div class="col-md-6">
 <div class="input-block mb-3">
-<label class="col-form-label">Confirm Password</label>
-<input class="form-control" type="password" name="cnfrm_password">
+<label class="col-form-label">Department <span class="text-danger">*</span></label>
+<select class="select" name="department">
+<option>Select Department</option>
+<option>Web Development</option>
+<option>IT Management</option>
+<option>Marketing</option>
+</select>
 </div>
 </div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
-<input class="form-control floating" type="text">
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Phone </label>
-<input class="form-control" type="text" name="mobile">
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department Name</label>
-<input class="form-control" type="text" name="department">
-</div>
-</div>
-</div>
-<div class="table-responsive m-t-15">
-<table class="table table-striped custom-table">
-<thead>
-<tr>
-<th>Module Permission</th>
-<th class="text-center">Read</th>
-<th class="text-center">Write</th>
-<th class="text-center">Create</th>
-<th class="text-center">Delete</th>
-<th class="text-center">Import</th>
-<th class="text-center">Export</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Projects</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Tasks</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Chat</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Estimates</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Invoices</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Timing Sheets</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+
 <div class="submit-section">
-<button class="btn btn-primary submit-btn">Submit</button>
+<button class="btn btn-success submit-btn" name="submit">Submit</button>
 </div>
 </form>
 </div>
@@ -381,71 +63,79 @@
 </div>
 
 
-<div id="edit_client" class="modal custom-modal fade" role="dialog">
+<div id="edit_employee" class="modal custom-modal fade" role="dialog">
 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h5 class="modal-title">Edit Client</h5>
+<h5 class="modal-title">Edit Employee</h5>
 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 <span aria-hidden="true">&times;</span>
 </button>
 </div>
 <div class="modal-body">
-<form method="post">
-	@csrf
+<form>
 <div class="row">
-<div class="col-md-6">
+<div class="col-sm-6">
 <div class="input-block mb-3">
-<label class="col-form-label">First Name <span class="text-danger">*</span></label>
-<input class="form-control" value="Barry" type="text">
+<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
+<input class="form-control" value="John" type="text">
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-sm-6">
 <div class="input-block mb-3">
-<label class="col-form-label">Last Name</label>
-<input class="form-control" value="Cuda" type="text">
+<label class="col-form-label">Depatment Name</label>
+<input class="form-control" value="Doe" type="text">
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-sm-6">
 <div class="input-block mb-3">
-<label class="col-form-label">Username <span class="text-danger">*</span></label>
-<input class="form-control" value="barrycuda" type="text">
+<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
+<input class="form-control" value="johndoe" type="text">
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-sm-6">
 <div class="input-block mb-3">
 <label class="col-form-label">Email <span class="text-danger">*</span></label>
-<input class="form-control floating" value="barrycuda@example.com" type="email">
+<input class="form-control" value="johndoe@example.com" type="email">
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-sm-6">
 <div class="input-block mb-3">
 <label class="col-form-label">Password</label>
-<input class="form-control" value="barrycuda" type="password">
+<input class="form-control" value="johndoe" type="password">
+</div>
+</div>
+
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Company</label>
+<select class="select">
+<option>Global Technologies</option>
+<option>Delta Infotech</option>
+<option selected>International Software Inc</option>
+</select>
 </div>
 </div>
 <div class="col-md-6">
 <div class="input-block mb-3">
-<label class="col-form-label">Confirm Password</label>
-<input class="form-control" value="barrycuda" type="password">
+<label class="col-form-label">Department <span class="text-danger">*</span></label>
+<select class="select">
+<option>Select Department</option>
+<option>Web Development</option>
+<option>IT Management</option>
+<option>Marketing</option>
+</select>
 </div>
 </div>
 <div class="col-md-6">
 <div class="input-block mb-3">
-<label class="col-form-label">Client ID <span class="text-danger">*</span></label>
-<input class="form-control floating" value="CLT-0001" type="text">
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Phone </label>
-<input class="form-control" value="9876543210" type="text">
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Company Name</label>
-<input class="form-control" type="text" value="Global Technologies">
+<label class="col-form-label">Designation <span class="text-danger">*</span></label>
+<select class="select">
+<option>Select Designation</option>
+<option>Web Designer</option>
+<option>Web Developer</option>
+<option>Android Developer</option>
+</select>
 </div>
 </div>
 </div>
@@ -464,6 +154,123 @@
 </thead>
 <tbody>
 <tr>
+<td>Holidays</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Leaves</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Clients</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
 <td>Projects</td>
 <td class="text-center">
 <label class="custom_check">
@@ -473,31 +280,31 @@
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
@@ -530,58 +337,19 @@
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Chat</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 </tr>
 <tr>
-<td>Estimates</td>
+<td>Chats</td>
 <td class="text-center">
 <label class="custom_check">
 <input type="checkbox" checked>
@@ -608,19 +376,19 @@
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 </tr>
 <tr>
-<td>Invoices</td>
+<td>Assets</td>
 <td class="text-center">
 <label class="custom_check">
 <input type="checkbox" checked>
@@ -647,13 +415,13 @@
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
@@ -686,13 +454,13 @@
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
 <td class="text-center">
 <label class="custom_check">
-<input type="checkbox" checked>
+<input type="checkbox" name="rememberme" class="rememberme">
 <span class="checkmark"></span>
 </label>
 </td>
@@ -710,12 +478,12 @@
 </div>
 
 
-<div class="modal custom-modal fade" id="delete_client" role="dialog">
+<div class="modal custom-modal fade" id="delete_employee" role="dialog">
 <div class="modal-dialog modal-dialog-centered">
 <div class="modal-content">
 <div class="modal-body">
 <div class="form-header">
-<h3>Delete Client</h3>
+<h3>Delete Employee</h3>
 <p>Are you sure want to delete?</p>
 </div>
 <div class="modal-btn delete-action">
@@ -1069,4 +837,5 @@
 </div>
 </div>
 </div>
+
 @endsection

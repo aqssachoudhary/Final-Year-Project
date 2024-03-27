@@ -8,10 +8,10 @@
 <div class="page-header">
 <div class="row align-items-center">
 <div class="col">
-<h3 class="page-title">Employee</h3>
+<h3 class="page-title">Teachers</h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
-<li class="breadcrumb-item active">Employee</li>
+<li class="breadcrumb-item active">Teachers</li>
 </ul>
 </div>
 <div class="col-auto float-end ms-auto">

@@ -3,8 +3,12 @@
 @section('content')
 <div class="page-wrapper">
     <div class="content container-fluid pb-0">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+        <div class="modal-header">
+<h5 class="modal-title">Add Teacher</h5></div>
 
-<div class="modal-body">
+<div class="modal-body card p-4">
 <form method="post" action="{{url('teacher')}}">
     @csrf
 <div class="row">
