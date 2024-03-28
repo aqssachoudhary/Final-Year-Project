@@ -36,5 +36,7 @@ Route::get('department/create','DepartmentController@create');
 Route::post('department','DepartmentController@store');
 //sessions
 Route::get('session','SessionController@index');
+Route::get('session/create','SessionController@create');
+Route::post('session','SessionController@store');
 
 

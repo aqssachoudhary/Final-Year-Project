@@ -1267,7 +1267,7 @@
                     <a href="{{url('session')}}"> All Sessions</a>
                   </li>
                   <li>
-                    <a href="tickets.html">Add Session</a>
+                    <a href="{{url('session/create')}}">Add Session</a>
                   </li>
                   
                 </ul>
