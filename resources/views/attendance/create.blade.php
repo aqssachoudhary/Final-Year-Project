@@ -3,77 +3,60 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Add Teacher</h5>
+          <h5 class="modal-title">Add Department</h5>
         </div>
         <div class="modal-body card p-4">
-          <form method="post" action="{{url('teacher')}}"> @csrf <div class="row">
-              <div class="col-sm-6">
+          <form method="post" action="{{url('attendance')}}"> @csrf <div class="row">
+              <div class="col-sm-4">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">First Name <span class="text-danger">*</span>
+                  <label class="col-form-label">Teacher ID <span class="text-danger">*</span>
                   </label>
-                  <input class="form-control" type="text" name="fname">
+                  <select class="select" name="teacher">
+                    <option>Select ID</option> @foreach($teachers as $teacher) <option>{{$teacher->id}}</option> @endforeach
+                  </select>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Last Name</label>
-                  <input class="form-control" type="text" name="lname">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
-                  <label class="col-form-label">Username <span class="text-danger">*</span>
+                  <label class="col-form-label">Student ID <span class="text-danger">*</span>
                   </label>
-                  <input class="form-control" type="text" name="username">
+                  <select class="select" name="student">
+                    <option>Select ID</option> @foreach($students as $student) <option>{{$student->id}}</option> @endforeach
+                  </select>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Email <span class="text-danger">*</span>
+                  <label class="col-form-label">Punch IN <span class="text-danger">*</span>
                   </label>
-                  <input class="form-control" type="email" name="email">
+                  <input class="form-control" type="text" name="in">
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Password</label>
-                  <input class="form-control" type="password" name="password">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
-                  <label class="col-form-label">Confirm Password</label>
-                  <input class="form-control" type="password" name="cnfrm_password">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
-                  <label class="col-form-label">Employee ID <span class="text-danger">*</span>
+                  <label class="col-form-label">Punch OUT <span class="text-danger">*</span>
                   </label>
-                  <input type="text" class="form-control">
+                  <input class="form-control" type="text" name="out">
                 </div>
               </div>
-              < <div class="col-sm-6">
+              <div class="col-sm-4">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Phone </label>
-                  <input class="form-control" type="text" name="mobile">
+                  <label class="col-form-label">Date <span class="text-danger">*</span>
+                  </label>
+                  <input class="form-control" type="text" name="date">
                 </div>
-            </div>
-            <div class="col-md-6">
-              <div class="input-block mb-3">
-                <label class="col-form-label">Department <span class="text-danger">*</span>
-                </label>
-                <select class="select" name="department">
-                  <option>Select Department</option>
-                  <option>Web Development</option>
-                  <option>IT Management</option>
-                  <option>Marketing</option>
-                </select>
               </div>
-            </div>
-            <div class="submit-section">
-              <button class="btn btn-primary submit-btn" name="submit">Submit</button>
-            </div>
+              <div class="col-sm-4">
+                <label>Status</label>
+                <br>
+                <label class="radio-inline">
+                  <input type="radio" name="status" value="1" checked="checked">Active </label>
+                <label class="radio-inline">
+                  <input type="radio" name="status" value="0">Inctive </label>
+              </div>
+              <div class="submit-section">
+                <button class="btn btn-success submit-btn" name="submit">Submit</button>
+              </div>
           </form>
         </div>
       </div>
@@ -93,20 +76,20 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">First Name <span class="text-danger">*</span>
+                  <label class="col-form-label">Student Name <span class="text-danger">*</span>
                   </label>
                   <input class="form-control" value="John" type="text">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Last Name</label>
+                  <label class="col-form-label">Depatment Name</label>
                   <input class="form-control" value="Doe" type="text">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Username <span class="text-danger">*</span>
+                  <label class="col-form-label">Student ID <span class="text-danger">*</span>
                   </label>
                   <input class="form-control" value="johndoe" type="text">
                 </div>
@@ -126,34 +109,6 @@
               </div>
               <div class="col-sm-6">
                 <div class="input-block mb-3">
-                  <label class="col-form-label">Confirm Password</label>
-                  <input class="form-control" value="johndoe" type="password">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
-                  <label class="col-form-label">Employee ID <span class="text-danger">*</span>
-                  </label>
-                  <input type="text" value="FT-0001" readonly class="form-control floating">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
-                  <label class="col-form-label">Joining Date <span class="text-danger">*</span>
-                  </label>
-                  <div class="cal-icon">
-                    <input class="form-control datetimepicker" type="text">
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
-                  <label class="col-form-label">Phone </label>
-                  <input class="form-control" value="9876543210" type="text">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-block mb-3">
                   <label class="col-form-label">Company</label>
                   <select class="select">
                     <option>Global Technologies</option>
@@ -167,9 +122,6 @@
                   <label class="col-form-label">Department <span class="text-danger">*</span>
                   </label>
                   <select class="select">
-                    <option>Select Department</option>
-                    <option>Web Development</option>
-                    <option>IT Management</option>
                     <option>Marketing</option>
                   </select>
                 </div>
@@ -718,7 +670,9 @@
           <div class="col-4">
             <div class="form-check card-radio p-0">
               <input class="form-check-input" type="radio" name="data-topbar" id="topbar-color-dark" value="dark">
-              <label class="form-check-label  avatar-md w-100" for="topbar-color-dark">undefined<img src="assets/img/dark.png" alt="Layout Image">undefined</label>
+              <label class="form-check-label  avatar-md w-100" for="topbar-color-dark">
+                <img src="assets/img/dark.png" alt="Layout Image">
+              </label>
             </div>
             <h5 class="fs-13 text-center mt-2">Dark</h5>
           </div>
@@ -729,10 +683,41 @@
             <h6>Choose a size of Sidebar.</h6>
           </div>
           <div class="row">
-            <div class="col-4">undefined<div class="form-check sidebar-setting card-radio  p-0 ">undefined<input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-default" value="lg">undefined<label class="form-check-label avatar-md w-100" for="sidebar-size-default">undefined<img src="assets/img/vertical.png" alt="Layout Image">undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Default</h5>undefined</div>undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio p-0">undefined<input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-compact" value="md">undefined<label class="form-check-label  avatar-md w-100" for="sidebar-size-compact">undefined<img src="assets/img/compact.png" alt="Layout Image">undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Compact</h5>undefined</div>undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio p-0 ">undefined<input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-small-hover" value="sm-hover">undefined<label class="form-check-label avatar-md w-100" for="sidebar-size-small-hover">undefined<img src="assets/img/small-hover.png" alt="Layout Image">undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Small Hover View</h5>undefined</div>undefined
-          </div>undefined
-        </div>undefined<div id="sidebar-view">undefined<div class="layout-head pt-3">undefined<h5>Sidebar View</h5>undefined<h6>Choose Default or Detached Sidebar view.</h6>undefined</div>undefined<div class="row">undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio  p-0">undefined<input class="form-check-input" type="radio" name="data-layout-style" id="sidebar-view-default" value="default">undefined<label class="form-check-label avatar-md w-100" for="sidebar-view-default">undefined<img src="assets/img/compact.png" alt="Layout Image">undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Default</h5>undefined</div>undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio p-0">undefined<input class="form-check-input" type="radio" name="data-layout-style" id="sidebar-view-detached" value="detached">undefined<label class="form-check-label  avatar-md w-100" for="sidebar-view-detached">undefined<img src="assets/img/detached.png" alt="Layout Image">undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Detached</h5>undefined</div>undefined</div>undefined</div>undefined<div id="sidebar-color">undefined<div class="layout-head pt-3">undefined<h5>Sidebar Color</h5>undefined<h6>Choose a color of Sidebar.</h6>undefined</div>undefined<div class="row">undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio p-0" data-bs-toggle="collapse" data-bs-target="#collapseBgGradient.show">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-light" value="light">undefined<label class="form-check-label  avatar-md w-100" for="sidebar-color-light">undefined<span class="bg-light bg-sidebarcolor"></span>undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Light</h5>undefined</div>undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio p-0" data-bs-toggle="collapse" data-bs-target="#collapseBgGradient.show">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-dark" value="dark">undefined<label class="form-check-label  avatar-md w-100" for="sidebar-color-dark">undefined<span class="bg-darks bg-sidebarcolor"></span>undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Dark</h5>undefined</div>undefined<div class="col-4">undefined<div class="form-check sidebar-setting card-radio p-0">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient" value="gradient">undefined<label class="form-check-label avatar-md w-100" for="sidebar-color-gradient">undefined<span class="bg-gradients bg-sidebarcolor"></span>undefined</label>undefined</div>undefined<h5 class="fs-13 text-center mt-2">Gradient</h5>undefined</div>undefined<div class="col-4 d-none">undefined<button class="btn btn-link avatar-md w-100 p-0 overflow-hidden border collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBgGradient" aria-expanded="false" aria-controls="collapseBgGradient">undefined<span class="d-flex gap-1 h-100">undefined<span class="flex-shrink-0">undefined<span class="bg-vertical-gradient d-flex h-100 flex-column gap-1 p-1">undefined<span class="d-block p-1 px-2 bg-soft-light rounded mb-2"></span>undefined<span class="d-block p-1 px-2 pb-0 bg-soft-light"></span>undefined<span class="d-block p-1 px-2 pb-0 bg-soft-light"></span>undefined<span class="d-block p-1 px-2 pb-0 bg-soft-light"></span>undefined</span>undefined</span>undefined<span class="flex-grow-1">undefined<span class="d-flex h-100 flex-column">undefined<span class="bg-light d-block p-1"></span>undefined<span class="bg-light d-block p-1 mt-auto"></span>undefined</span>undefined</span>undefined</span>undefined</button>undefined<h5 class="fs-13 text-center mt-2">Gradient</h5>undefined</div>undefined</div>undefined<div class="collapse d-none" id="collapseBgGradient">undefined<div class="d-flex gap-2 flex-wrap img-switch p-2 px-3 bg-light rounded">undefined<div class="form-check sidebar-setting card-radio">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-1" value="gradient">undefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient">undefined<span class="avatar-title rounded-circle bg-vertical-gradient"></span>undefined</label>undefined</div>undefined<div class="form-check sidebar-setting card-radio">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-2" value="gradient-2">undefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient-2">undefined<span class="avatar-title rounded-circle bg-vertical-gradient-2"></span>undefined</label>undefined</div>undefined<div class="form-check sidebar-setting card-radio">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-3" value="gradient-3">undefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient-3">undefined<span class="avatar-title rounded-circle bg-vertical-gradient-3"></span>undefined</label>undefined</div>undefined<div class="form-check sidebar-setting card-radio">undefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-4" value="gradient-4">undefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient-4">undefined<span class="avatar-title rounded-circle bg-vertical-gradient-4"></span>undefined</label>undefined</div>undefined</div>undefined</div>undefined</div>undefined
-      </div>undefined
-    </div>undefined
-  </div>undefined<div class="offcanvas-footer border-top p-3 text-center">undefined<div class="row">undefined<div class="col-6">undefined<button type="button" class="btn btn-light w-100 bor-rad-50" id="reset-layout">Reset</button>undefined</div>undefined<div class="col-6">undefined<a href="https://themeforest.net/item/smarthr-bootstrap-admin-panel-template/21153150" target="_blank" class="btn btn-primary w-100 bor-rad-50">Buy Now</a>undefined</div>undefined</div>undefined</div>undefined
+            <div class="col-4">
+              <div class="form-check sidebar-setting card-radio  p-0 ">
+                <input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-default" value="lg">
+                <label class="form-check-label avatar-md w-100" for="sidebar-size-default">
+                  <img src="assets/img/vertical.png" alt="Layout Image">
+                </label>
+              </div>
+              <h5 class="fs-13 text-center mt-2">Default</h5>
+            </div>
+            <div class="col-4">
+              <div class="form-check sidebar-setting card-radio p-0">
+                <input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-compact" value="md">
+                <label class="form-check-label  avatar-md w-100" for="sidebar-size-compact">
+                  <img src="assets/img/compact.png" alt="Layout Image">
+                </label>
+              </div>
+              <h5 class="fs-13 text-center mt-2">Compact</h5>
+            </div>
+            <div class="col-4">
+              <div class="form-check sidebar-setting card-radio p-0 ">
+                <input class="form-check-input" type="radio" name="data-sidebar-size" id="sidebar-size-small-hover" value="sm-hover">undefined<label class="form-check-label avatar-md w-100" for="sidebar-size-small-hover">undefinedundefined<img src="assets/img/small-hover.png" alt="Layout Image">undefinedundefined</label>undefined
+              </div>undefined<h5 class="fs-13 text-center mt-2">Small Hover View</h5>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar-view">
+          <div class="layout-head pt-3">
+            <h5>Sidebar View</h5>
+            <h6>Choose Default or Detached Sidebar view.</h6>
+          </div>
+          <div class="row">
+            <div class="col-4">undefined<div class="form-check sidebar-setting card-radio  p-0">undefinedundefined<input class="form-check-input" type="radio" name="data-layout-style" id="sidebar-view-default" value="default">undefinedundefined<label class="form-check-label avatar-md w-100" for="sidebar-view-default">undefinedundefinedundefined<img src="assets/img/compact.png" alt="Layout Image">undefinedundefinedundefined</label>undefinedundefined</div>undefinedundefined<h5 class="fs-13 text-center mt-2">Default</h5>undefined undefined</div>undefinedundefined<div class="col-4">undefinedundefined<div class="form-check sidebar-setting card-radio p-0">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-layout-style" id="sidebar-view-detached" value="detached">undefinedundefinedundefined<label class="form-check-label  avatar-md w-100" for="sidebar-view-detached">undefinedundefinedundefined<img src="assets/img/detached.png" alt="Layout Image">undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<h5 class="fs-13 text-center mt-2">Detached</h5>undefined undefinedundefined</div>undefined undefined
+          </div>undefined undefined
+        </div>undefinedundefined<div id="sidebar-color">undefinedundefined<div class="layout-head pt-3">undefinedundefinedundefined<h5>Sidebar Color</h5>undefinedundefinedundefined<h6>Choose a color of Sidebar.</h6>undefinedundefined</div>undefinedundefined<div class="row">undefinedundefinedundefined<div class="col-4">undefinedundefinedundefined<div class="form-check sidebar-setting card-radio p-0" data-bs-toggle="collapse" data-bs-target="#collapseBgGradient.show">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-light" value="light">undefinedundefinedundefined<label class="form-check-label  avatar-md w-100" for="sidebar-color-light">undefinedundefinedundefined<span class="bg-light bg-sidebarcolor"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<h5 class="fs-13 text-center mt-2">Light</h5>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="col-4">undefinedundefinedundefined<div class="form-check sidebar-setting card-radio p-0" data-bs-toggle="collapse" data-bs-target="#collapseBgGradient.show">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-dark" value="dark">undefinedundefinedundefined<label class="form-check-label  avatar-md w-100" for="sidebar-color-dark">undefinedundefinedundefined<span class="bg-darks bg-sidebarcolor"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<h5 class="fs-13 text-center mt-2">Dark</h5>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="col-4">undefinedundefinedundefined<div class="form-check sidebar-setting card-radio p-0">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient" value="gradient">undefinedundefinedundefined<label class="form-check-label avatar-md w-100" for="sidebar-color-gradient">undefinedundefinedundefined<span class="bg-gradients bg-sidebarcolor"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<h5 class="fs-13 text-center mt-2">Gradient</h5>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="col-4 d-none">undefinedundefinedundefined<button class="btn btn-link avatar-md w-100 p-0 overflow-hidden border collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBgGradient" aria-expanded="false" aria-controls="collapseBgGradient">undefinedundefinedundefined<span class="d-flex gap-1 h-100">undefinedundefinedundefined<span class="flex-shrink-0">undefinedundefinedundefined<span class="bg-vertical-gradient d-flex h-100 flex-column gap-1 p-1">undefinedundefinedundefined<span class="d-block p-1 px-2 bg-soft-light rounded mb-2"></span>undefinedundefinedundefined<span class="d-block p-1 px-2 pb-0 bg-soft-light"></span>undefinedundefinedundefined<span class="d-block p-1 px-2 pb-0 bg-soft-light"></span>undefinedundefinedundefined<span class="d-block p-1 px-2 pb-0 bg-soft-light"></span>undefinedundefinedundefined</span>undefinedundefinedundefined</span>undefinedundefinedundefined<span class="flex-grow-1">undefinedundefinedundefined<span class="d-flex h-100 flex-column">undefinedundefinedundefined<span class="bg-light d-block p-1"></span>undefinedundefinedundefined<span class="bg-light d-block p-1 mt-auto"></span>undefinedundefinedundefined</span>undefinedundefinedundefined</span>undefinedundefinedundefined</span>undefinedundefinedundefined</button>undefinedundefinedundefined<h5 class="fs-13 text-center mt-2">Gradient</h5>undefinedundefinedundefined</div>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="collapse d-none" id="collapseBgGradient">undefinedundefinedundefined<div class="d-flex gap-2 flex-wrap img-switch p-2 px-3 bg-light rounded">undefinedundefinedundefined<div class="form-check sidebar-setting card-radio">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-1" value="gradient">undefinedundefinedundefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient">undefinedundefinedundefined<span class="avatar-title rounded-circle bg-vertical-gradient"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="form-check sidebar-setting card-radio">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-2" value="gradient-2">undefinedundefinedundefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient-2">undefinedundefinedundefined<span class="avatar-title rounded-circle bg-vertical-gradient-2"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="form-check sidebar-setting card-radio">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-3" value="gradient-3">undefinedundefinedundefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient-3">undefinedundefinedundefined<span class="avatar-title rounded-circle bg-vertical-gradient-3"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="form-check sidebar-setting card-radio">undefinedundefinedundefined<input class="form-check-input" type="radio" name="data-sidebar" id="sidebar-color-gradient-4" value="gradient-4">undefinedundefinedundefined<label class="form-check-label p-0 avatar-xs rounded-circle" for="sidebar-color-gradient-4">undefinedundefinedundefined<span class="avatar-title rounded-circle bg-vertical-gradient-4"></span>undefinedundefinedundefined</label>undefinedundefinedundefined</div>undefinedundefinedundefined</div>undefinedundefinedundefined</div>undefined undefinedundefined</div>undefined undefined undefined
+      </div>undefined undefined undefined
+    </div>undefined undefined undefined
+  </div>undefinedundefinedundefined<div class="offcanvas-footer border-top p-3 text-center">undefinedundefinedundefined<div class="row">undefinedundefinedundefined<div class="col-6">undefinedundefinedundefined<button type="button" class="btn btn-light w-100 bor-rad-50" id="reset-layout">Reset</button>undefinedundefinedundefined</div>undefinedundefinedundefined<div class="col-6">undefinedundefinedundefined<a href="https://themeforest.net/item/smarthr-bootstrap-admin-panel-template/21153150" target="_blank" class="btn btn-primary w-100 bor-rad-50">Buy Now</a>undefinedundefinedundefined</div>undefinedundefinedundefined</div>undefinedundefinedundefined</div>undefined undefined undefined
 </div> @endsection

@@ -38,5 +38,9 @@ Route::post('department','DepartmentController@store');
 Route::get('session','SessionController@index');
 Route::get('session/create','SessionController@create');
 Route::post('session','SessionController@store');
+//attendance
+Route::get('attendance','AttendanceController@index');
+Route::get('attendance/create','AttendanceController@create');
+Route::post('attendance','AttendanceController@store');
 
 

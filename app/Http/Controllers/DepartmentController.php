@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Department;
 
+
 class DepartmentController extends Controller
 {
     public function index()
@@ -14,8 +15,9 @@ class DepartmentController extends Controller
     }
 
     public function create()
-    {
-        return view('sections.create');
+    {$departments=Department::get();
+       
+        return view('sections.create',compact('departments'));
     }
     public function store(Request $request)
     {

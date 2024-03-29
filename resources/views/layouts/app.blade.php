@@ -1268,10 +1268,28 @@
                   </li>
                   <li>
                     <a href="{{url('session/create')}}">Add Session</a>
+                  </li>  
+                </ul>
+              </li>
+              
+              
+              <li class="submenu">
+                <a href="#">
+                  <i class="la la-laptop-medical"></i>
+                  <span> Attendance </span>
+                  <span class="menu-arrow"></span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="{{url('attendance')}}"> All Attendance </a>
+                  </li>
+                  <li>
+                    <a href="{{url('attendance/create')}}">Add Attendance </a>
                   </li>
                   
                 </ul>
               </li>
+                
               
               <li class="menu-title">
                 <span>Performance</span>

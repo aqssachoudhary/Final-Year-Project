@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+
 use Hash;
 use Spatie\Permission\Models\Role;
 
@@ -11,11 +12,13 @@ class TeacherController extends Controller
 {
     public function index()
 
-    { $teachers=User::role('Teacher')->get();
+    {
+     $teachers=User::role('Teacher')->get();
         return view('teachers.index',compact('teachers'));
     }
     public function create()
     {
+        
         return view('teachers.create');
     }
     public function store(Request $request)
