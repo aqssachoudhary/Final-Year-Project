@@ -62,11 +62,4 @@
             <button class="btn btn-primary submit-btn" name="submit">Submit</button>
           </div>
         </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-</div>
 @endsection
