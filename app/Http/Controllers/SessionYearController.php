@@ -30,9 +30,9 @@ class SessionYearController extends Controller
          
                      $validator = \Validator::make(
                 $request->all(), [
-                    'vender_id' => 'required',
-                    'purchase_date' => 'required',
-                    'category_id' => 'required',
+                    'start_date' => 'required',
+                    'end_date' => 'required',
+                    'sections_id' => 'required',
                 ]
             );
             if($validator->fails())
