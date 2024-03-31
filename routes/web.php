@@ -33,7 +33,9 @@ Route::get('department','DepartmentController@index');
 Route::get('department/create','DepartmentController@create');
 Route::post('department','DepartmentController@store');
 //sessions
-Route::get('session','SessionController@index');
+Route::get('session-year','SessionYearController@index');
+Route::get('session-year/create','SessionYearController@create');
+Route::post('session-year','SessionYearController@store');
 
 });
 

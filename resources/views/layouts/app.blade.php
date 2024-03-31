@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/material.css')}}">
     <link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   </head>
   <body>
     <div class="main-wrapper">
@@ -25,7 +26,6 @@
             <img src="{{asset('assets/img/logo4.png')}}" class="logo-dashboard" alt="Logo">
           </a>
           <a href="{{url('/')}}" class="logo collapse-logo">
-            <img src="{{asset('assets/img/collapse-logo.svg')}}" alt="Logo">
           </a>
           <a href="{{url('/')}}" class="logo2">
             <img src="{{asset('assets/img/logo2.png')}}" width="40" height="40" alt="Logo">
@@ -75,7 +75,6 @@
                       </div>
                     </a>
                   </li>
-                  <li class="notification-message">
                     <a href="activities.html">
                       <div class="chat-block d-flex">
                         <span class="avatar flex-shrink-0">
@@ -1070,7 +1069,7 @@
               <span>Teachers</span>
             </li>
             <li class="submenu">
-              <a href="#" class="noti-dot">
+              <a href="#">
                 <i class="la la-user"></i>
                 <span>Teachers</span>
                 <span class="menu-arrow"></span>
@@ -1089,7 +1088,7 @@
                 <span>Students</span>
               </li>
               <li class="submenu">
-                <a href="#" class="noti-dot">
+                <a href="#" >
                   <i class="la la-user"></i>
                   <span>Students</span>
                   <span class="menu-arrow"></span>
@@ -1132,22 +1131,22 @@
                 </a>
                 <ul>
                   <li>
-                    <a href="{{url('session')}}"> All Sessions</a>
+                    <a href="{{url('session-year')}}"> All Sessions</a>
                   </li>
                   <li>
-                    <a href="tickets.html">Add Session</a>
+                    <a href="{{url('session-year/create')}}">Add Session</a>
                   </li>
                   
                 </ul>
               </li>
               
               <li class="menu-title">
-                <span>Performance</span>
+                <span>Management</span>
               </li>
               <li class="submenu">
                 <a href="#">
                   <i class="la la-laptop-medical"></i>
-                  <span> Performance </span>
+                  <span> Classes </span>
                   <span class="menu-arrow"></span>
                 </a>
                 <ul>
@@ -1167,7 +1166,7 @@
               <li class="submenu">
                 <a href="#">
                   <i class="la la-user-tag"></i>
-                  <span> Profile </span>
+                  <span> Subjects </span>
                   <span class="menu-arrow"></span>
                 </a>
                 <ul>
@@ -1182,7 +1181,7 @@
               <li class="submenu">
                 <a href="#">
                   <i class="la la-key"></i>
-                  <span> Authentication </span>
+                  <span> Sections </span>
                   <span class="menu-arrow"></span>
                 </a>
                 <ul>
@@ -2133,7 +2132,46 @@
 <script src="{{asset('assets/js/layout.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/theme-settings.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/app.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
+<script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
+
 <script src="{{asset('cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="6de4fa2cb1af1d1f9b7737bc-|49" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.select-multiple').select2();
+});
+</script>
+
+
+  @if (!empty(session('success')))
+        <script type="text/javascript">
+            Swal.fire(
+                'Success!!',
+                '{{ session('success') }}',
+                'success'
+            )
+        </script>
+    @endif
+    @if (!empty(session('error')))
+        <script type="text/javascript">
+            Swal.fire(
+                'Danger!!',
+                '{{ session('error') }}',
+                'error'
+            )
+        </script>
+    @endif
+    @if (!empty(session('warning')))
+        <script type="text/javascript">
+            Swal.fire(
+                'Warning!!',
+                '{{ session('warning') }}',
+                'warning'
+            )
+        </script>
+    @endif
+
 </body>
 <!-- Mirrored from smarthr.dreamstechnologies.com/html/template/{{url('/')}} by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 09:24:30 GMT -->
 </html>
