@@ -2121,8 +2121,9 @@
 </div>
 @yield('content')
 </div>
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery-3.7.1.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
+<script data-cfasync="false" src="{{asset('cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/jquery.slimscroll.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/plugins/morris/morris.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
@@ -2134,8 +2135,7 @@
 <script src="{{asset('assets/js/app.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
 
-<script src="{{asset('cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="6de4fa2cb1af1d1f9b7737bc-|49" defer></script>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="{{asset('cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="6de4fa2cb1af1d1f9b7737bc-|49" ></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
