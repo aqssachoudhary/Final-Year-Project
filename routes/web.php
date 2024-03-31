@@ -13,16 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 
 Auth::routes();
 
+Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//teacers
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('teacher','TeacherController@index');
 Route::get('teacher/create','TeacherController@create');
 Route::post('teacher','TeacherController@store');
@@ -38,5 +36,7 @@ Route::post('department','DepartmentController@store');
 Route::get('session','SessionController@index');
 Route::get('session/create','SessionController@create');
 Route::post('session','SessionController@store');
+
+});
 
 
