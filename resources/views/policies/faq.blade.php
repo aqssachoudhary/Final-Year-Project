@@ -1,500 +1,83 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="page-wrapper">
-    <div class="content container-fluid pb-0">
-
-        
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-<div class="modal-content">
-        <div class="modal-header">
-<h5 class="modal-title">Add Department</h5></div>
-
-<div class="modal-body card p-4">
-<form method="post" action="{{url('department')}}">
-    @csrf
+<div class="content container-fluid pb-0">
+<div class="page-header">
 <div class="row">
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="name">
-</div>
-</div>
-
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name=""> 
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Email <span class="text-danger">*</span></label>
-<input class="form-control" type="email" name="email">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Password</label>
-<input class="form-control" type="password" name="password">
-</div>
-</div>
-
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select" name="department">
-<option>Select Department</option>
-<option>Web Development</option>
-<option>IT Management</option>
-<option>Marketing</option>
-</select>
-</div>
-</div>
-
-<div class="submit-section">
-<button class="btn btn-success submit-btn" name="submit">Submit</button>
-</div>
-</form>
-</div>
+<div class="col-sm-12">
+<h3 class="page-title">FAQ</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item active">FAQ</li>
+</ul>
 </div>
 </div>
 </div>
 
-
-<div id="edit_employee" class="modal custom-modal fade" role="dialog">
-<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">Edit Employee</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
+<div class="faq-card">
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseOne">Anim pariatur cliche reprehenderit?</a>
+</h4>
 </div>
-<div class="modal-body">
-<form>
-<div class="row">
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
-<input class="form-control" value="John" type="text">
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Depatment Name</label>
-<input class="form-control" value="Doe" type="text">
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
-<input class="form-control" value="johndoe" type="text">
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Email <span class="text-danger">*</span></label>
-<input class="form-control" value="johndoe@example.com" type="email">
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Password</label>
-<input class="form-control" value="johndoe" type="password">
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Company</label>
-<select class="select">
-<option>Global Technologies</option>
-<option>Delta Infotech</option>
-<option selected>International Software Inc</option>
-</select>
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select">
-<option>Select Department</option>
-<option>Web Development</option>
-<option>IT Management</option>
-<option>Marketing</option>
-</select>
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Designation <span class="text-danger">*</span></label>
-<select class="select">
-<option>Select Designation</option>
-<option>Web Designer</option>
-<option>Web Developer</option>
-<option>Android Developer</option>
-</select>
+<div id="collapseOne" class="card-collapse collapse">
+<div class="card-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
 </div>
 </div>
 </div>
-<div class="table-responsive m-t-15">
-<table class="table table-striped custom-table">
-<thead>
-<tr>
-<th>Module Permission</th>
-<th class="text-center">Read</th>
-<th class="text-center">Write</th>
-<th class="text-center">Create</th>
-<th class="text-center">Delete</th>
-<th class="text-center">Import</th>
-<th class="text-center">Export</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Holidays</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Leaves</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Clients</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Projects</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Tasks</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Chats</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Assets</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Timing Sheets</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">Parsnip lotus root celery?</a>
+</h4>
 </div>
-<div class="submit-section">
-<button class="btn btn-primary submit-btn">Save</button>
-</div>
-</form>
+<div id="collapseTwo" class="card-collapse collapse">
+<div class="card-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
 </div>
 </div>
 </div>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">Ad vegan excepteur butcher ?</a>
+</h4>
 </div>
-
-
-<div class="modal custom-modal fade" id="delete_employee" role="dialog">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-<div class="modal-body">
-<div class="form-header">
-<h3>Delete Employee</h3>
-<p>Are you sure want to delete?</p>
-</div>
-<div class="modal-btn delete-action">
-<div class="row">
-<div class="col-6">
-<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
-</div>
-<div class="col-6">
-<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+<div id="collapseThree" class="card-collapse collapse">
+<div class="card-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
 </div>
 </div>
+</div>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">Ad vegan excepteur butcher vice lomo?</a>
+</h4>
+</div>
+<div id="collapseFour" class="card-collapse collapse">
+<div class="card-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">Cupidatat skateboard dolor brunch?</a>
+</h4>
+</div>
+<div id="collapseFive" class="card-collapse collapse">
+<div class="card-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
 </div>
 </div>
 </div>
@@ -837,5 +420,4 @@
 </div>
 </div>
 </div>
-
 @endsection

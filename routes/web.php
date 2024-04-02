@@ -36,8 +36,24 @@ Route::post('department','DepartmentController@store');
 Route::get('session-year','SessionYearController@index');
 Route::get('session-year/create','SessionYearController@create');
 Route::post('session-year','SessionYearController@store');
+//classes
+Route::get('classes','ClassesController@index');
+Route::get('classes/create','ClassesController@create');
+Route::get('classes/{id}/edit','ClassesController@edit');
 
-
+Route::post('classes','ClassesController@store');
+//subject
+Route::get('subject','SubjectController@index');
+Route::get('subject/create','SubjectController@create');
+Route::post('subject','SubjectController@store');
+//sections
+Route::get('section','SectionController@index');
+Route::get('section/create','SectionController@create');
+Route::post('section','SectionController@store');
+//pages
+Route::get('terms','TermsController@index');
+Route::get('privacy','TermsController@privacy');
+Route::get('faq','TermsController@faq');
 });
 
 

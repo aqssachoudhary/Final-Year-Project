@@ -10,21 +10,19 @@ class DepartmentController extends Controller
     public function index()
     {
         $departments=Department::get();
-        return view('sections.index',compact('departments'));
+        return view('department.index',compact('departments'));
     }
 
     public function create()
     {
-        return view('sections.create');
+        return view('department.create');
     }
     public function store(Request $request)
     {
         $department= new Department;
-        $department->student_name=$request->name;
-          $department->email=$request->email;
-          $department->password=$request->password;
+        
 
-            $department->department=$request->department;
+            $department->name=$request->department;
               $department->status=$request->status;
               $department->save();
               return redirect('department')->with('success','Record Added');
