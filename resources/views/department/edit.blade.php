@@ -1,239 +1,463 @@
 @extends('layouts.app')
+
 @section('content')
+
 <div class="page-wrapper">
+    <div class="content container-fluid pb-0">
 
-<div class="content container-fluid">
+        
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+        <div class="page-header ">
+<h3 class="modal-title text-center">Add Department</h3></div>
 
-<div class="page-header">
+<div class="modal-body card p-4">
+<form method="post" action="{{url('department/'.$department->id)}}">
+  @csrf
+    @method('put')
 <div class="row">
-<div class="col">
-<h3 class="page-title">Daily Classes</h3>
 
-</div>
-<div class="col-auto float-end ms-auto">
+<div class="col-md-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Status <span class="text-danger">*</span></label>
+<select class="select" name="status" required>
+<option>Active</option>
 
-<a href="{{url('section/create')}}" class="btn add-btn m-r-5"  data-bs-target="#add_schedule"><i class="fa-solid fa-plus"></i> Add Sections</a>
+<option>In-Active</option>
+</select>
+</div>
+</div>
+<div class="col-md-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Department <span class="text-danger">*</span></label>
+<select class="select" name="department" >
+<option >Select Department</option>
+<option>Web Development</option>
+<option>IT Management</option>
+<option>Marketing</option>
+<option>Engeenring</option>
+</select>
+</div>
+</div>
+
+
+<div class="submit-section">
+<button class="btn btn-primary submit-btn" name="submit">Submit</button>
+</div>
+</form>
+</div>
 </div>
 </div>
 </div>
 
-<div class="row ">
-<div class="col-md-12">
-<div class="table-responsive">
-<table class="table table-striped custom-table datatable leave-employee-table">
-<thead class="table-dark">
+
+<div id="edit_employee" class="modal custom-modal fade" role="dialog">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Edit Employee</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
+<input class="form-control" value="John" type="text">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Depatment Name</label>
+<input class="form-control" value="Doe" type="text">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
+<input class="form-control" value="johndoe" type="text">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Email <span class="text-danger">*</span></label>
+<input class="form-control" value="johndoe@example.com" type="email">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Password</label>
+<input class="form-control" value="johndoe" type="password">
+</div>
+</div>
+
+<div class="col-sm-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Company</label>
+<select class="select">
+<option>Global Technologies</option>
+<option>Delta Infotech</option>
+<option selected>International Software Inc</option>
+</select>
+</div>
+</div>
+<div class="col-md-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Department <span class="text-danger">*</span></label>
+<select class="select">
+<option>Select Department</option>
+<option>Web Development</option>
+<option>IT Management</option>
+<option>Marketing</option>
+</select>
+</div>
+</div>
+<div class="col-md-6">
+<div class="input-block mb-3">
+<label class="col-form-label">Designation <span class="text-danger">*</span></label>
+<select class="select">
+<option>Select Designation</option>
+<option>Web Designer</option>
+<option>Web Developer</option>
+<option>Android Developer</option>
+</select>
+</div>
+</div>
+</div>
+<div class="table-responsive m-t-15">
+<table class="table table-striped custom-table">
+<thead>
 <tr>
-<th>#</th>
-<th>classes ID</th>
-<th>sections</th>
-
-<th>Status</th>
-<th>Edit</th>
-<th>Update</th>
-
+<th>Module Permission</th>
+<th class="text-center">Read</th>
+<th class="text-center">Write</th>
+<th class="text-center">Create</th>
+<th class="text-center">Delete</th>
+<th class="text-center">Import</th>
+<th class="text-center">Export</th>
 </tr>
 </thead>
 <tbody>
-	  @foreach($sections as $section)
-
-
-
-
-
-
 <tr>
-<td>
-<h2 class="table-avatar">
-<a href="profile.html" ></a>
-<a href="profile.html">{{$section->id}}</a>
-</h2>
+<td>Holidays</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
 </td>
-<td>
-<h2 class="table-avatar">
-<a href="profile.html" ></a>
-<a href="profile.html">{{$section->name}}</a>
-</h2>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
 </td>
-<td>
-<div class="user-add-shedule-list">
-<h2>
-<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" >
-<span class="username-info m-b-10">{{$section->name}}</span>
-
-</a>
-</h2>
-</div>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
 </td>
-
-<td>
-<div class="user-add-shedule-list">
-<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
-<span>{{$section->status}}</span>
-</a>
-</div>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
 </td>
-<td>
-                           <a href="{{url('sections/'.$section->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
-                           </a>
-                        </td>
-            <td>
-                <td>
-                          
-                                                   <form action="{{ url('sections', $section->id) }}" method="POST" id="customer">
-                        @csrf
-                            @method('DELETE')
- <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     
-
-
-   
-                        </form>
-                           
-                        </td>
-                                            
-
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
 </tr>
-@endforeach
+<tr>
+<td>Leaves</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Clients</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Projects</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Tasks</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Chats</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Assets</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+<tr>
+<td>Timing Sheets</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+<td class="text-center">
+<label class="custom_check">
+<input type="checkbox" name="rememberme" class="rememberme">
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
 </tbody>
 </table>
 </div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-
-<div id="add_schedule" class="modal custom-modal fade" role="dialog">
-<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">Add Schedule</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<form method="post">
-<div class="row">
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select">
-<option value>Select</option>
-<option value>Development</option>
-<option value="1">Finance</option>
-<option value="2">Finance and Management</option>
-<option value="3">Hr & Finance</option>
-<option value="4">ITech</option>
-</select>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Employee Name <span class="text-danger">*</span></label>
-<select class="select">
-<option value>Select </option>
-<option value="1">Richard Miles </option>
-<option value="2">John Smith</option>
-<option value="3">Mike Litorus </option>
-<option value="4">Wilmer Deluna</option>
-</select>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Date</label>
-<div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Shifts <span class="text-danger">*</span></label>
-<select class="select">
-<option value>Select </option>
-<option value="1">10'o clock Shift</option>
-<option value="2">10:30 shift</option>
-<option value="3">Daily Shift </option>
-<option value="4">New Shift</option>
-</select>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Min Start Time <span class="text-danger">*</span></label>
-<div class="input-group time">
-<input class="form-control timepicker"><span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Start Time <span class="text-danger">*</span></label>
-<div class="input-group time">
-<input class="form-control timepicker"><span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Max Start Time <span class="text-danger">*</span></label>
-<div class="input-group time">
-<input class="form-control timepicker"><span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Min End Time <span class="text-danger">*</span></label>
-<div class="input-group time">
-<input class="form-control timepicker"><span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">End Time <span class="text-danger">*</span></label>
-<div class="input-group time">
-<input class="form-control timepicker"><span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Max End Time <span class="text-danger">*</span></label>
-<div class="input-group time">
-<input class="form-control timepicker"><span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Break Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text">
-</div>
-</div>
-<div class="col-sm-12">
-<div class="input-block mb-3">
-<label class="col-form-label">Accept Extra Hours </label>
-<div class="form-check form-switch">
-<input type="checkbox" class="form-check-input" id="customSwitch1" checked>
-<label class="form-check-label" for="customSwitch1"></label>
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="input-block mb-3">
-<label class="col-form-label">Publish </label>
-<div class="form-check form-switch">
-<input type="checkbox" class="form-check-input" id="customSwitch2" checked>
-<label class="form-check-label" for="customSwitch2"></label>
-</div>
-</div>
-</div>
-</div>
 <div class="submit-section">
-<button class="btn btn-primary submit-btn">Submit</button>
+<button class="btn btn-primary submit-btn">Save</button>
 </div>
 </form>
 </div>
@@ -242,172 +466,29 @@
 </div>
 
 
-<div id="edit_schedule" class="modal custom-modal fade" role="dialog">
-<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal custom-modal fade" id="delete_employee" role="dialog">
+<div class="modal-dialog modal-dialog-centered">
 <div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">Edit Schedule</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
 <div class="modal-body">
-<form method="post">
+<div class="form-header">
+<h3>Delete Employee</h3>
+<p>Are you sure want to delete?</p>
+</div>
+<div class="modal-btn delete-action">
 <div class="row">
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select">
-<option value>Select</option>
-<option selected value>Development</option>
-<option value="1">Finance</option>
-<option value="2">Finance and Management</option>
-<option value="3">Hr & Finance</option>
-<option value="4">ITech</option>
-</select>
+<div class="col-6">
+<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
 </div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Employee Name <span class="text-danger">*</span></label>
-<select class="select">
-<option value>Select </option>
-<option selected value="1">Richard Miles </option>
-<option value="2">John Smith</option>
-<option value="3">Mike Litorus </option>
-<option value="4">Wilmer Deluna</option>
-</select>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Date <span class="text-danger">*</span></label>
-<div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Shifts <span class="text-danger">*</span></label>
-<select class="select">
-<option value>Select </option>
-<option value="1">10'o clock Shift</option>
-<option value="2">10:30 shift</option>
-<option value="3">Daily Shift </option>
-<option selected value="4">New Shift</option>
-</select>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Min Start Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="06:11 am">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Start Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="06:30 am">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Max Start Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="08:12 am">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Min End Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="09:12 pm">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">End Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="09:30 pm">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Max End Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="09:45 pm">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Break Time <span class="text-danger">*</span></label>
-<input class="form-control timepicker" type="text" value="45">
-</div>
-</div>
-<div class="col-sm-12">
-<div class="form-check">
-<input type="checkbox" class="form-check-input" id="customCheck1">
-<label class="form-check-label" for="customCheck1">Recurring Shift</label>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="input-block mb-3">
-<label class="col-form-label">Repeat Every</label>
-<select class="select">
-<option value>1 </option>
-<option value="1">2</option>
-<option value="2">3</option>
-<option value="3">4</option>
-<option selected value="4">5</option>
-<option value="3">6</option>
-</select>
-<label class="col-form-label">Week(s)</label>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="input-block mb-3 wday-box">
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="monday" class="days recurring" checked onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">M</span></label>
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="tuesday" class="days recurring" checked onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">T</span></label>
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="wednesday" class="days recurring" checked onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">W</span></label>
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="thursday" class="days recurring" checked onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">T</span></label>
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="friday" class="days recurring" checked onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">F</span></label>
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="saturday" class="days recurring" onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">S</span></label>
-<label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="sunday" class="days recurring" onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-68411d9d27357df21d14765e-><span class="checkmark">S</span></label>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">End On <span class="text-danger">*</span></label>
-<div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="form-check">
-<input type="checkbox" class="form-check-input" id="customCheck2">
-<label class="form-check-label" for="customCheck2">Indefinite</label>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="input-block mb-3">
-<label class="col-form-label">Accept Extra Hours </label>
-<div class="form-check form-switch">
-<input type="checkbox" class="form-check-input" id="customSwitch3" checked>
-<label class="form-check-label" for="customSwitch3"></label>
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="input-block mb-3">
-<label class="col-form-label">Publish </label>
-<div class="form-check form-switch">
-<input type="checkbox" class="form-check-input" id="customSwitch4" checked>
-<label class="form-check-label" for="customSwitch4"></label>
+<div class="col-6">
+<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
 </div>
 </div>
 </div>
 </div>
-<div class="submit-section">
-<button class="btn btn-primary submit-btn">Submit</button>
-</div>
-</form>
 </div>
 </div>
 </div>
+
 </div>
 
 </div>
@@ -744,4 +825,5 @@
 </div>
 </div>
 </div>
+
 @endsection

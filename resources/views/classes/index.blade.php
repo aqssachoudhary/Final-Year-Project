@@ -22,7 +22,7 @@
                         <th>Classes</th>
                         <th>Status</th>
                         <th>Edit</th>
-                        <th>Update</th>
+                        <th>Delete</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -55,7 +55,15 @@
                            </a>
                         </td>
                         <td>
-                           <a href="{{url('classes/'.$class->id.'/update')}}" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-trash"></i> </a>
+                          
+                                                   <form action="{{ url('classes', $class->id) }}" method="POST" id="customer">
+                        @csrf
+                            @method('DELETE')
+ <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     
+
+
+   
+                        </form>
                            
                         </td>
                      </tr>

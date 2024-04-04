@@ -9,7 +9,7 @@
 <h3 class="modal-title text-center">Add Teacher</h3></div>
     <div class="modal-content">
       <div class="modal-body card p-4">
-                        <form method="post" action="{{url('teacher')}}">
+                        <form method="post" action="{{url('teacher')}}" >
                         @csrf
                         <div class="row">
                             <div class="col-sm-6">

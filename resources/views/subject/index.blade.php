@@ -21,8 +21,8 @@
 								<th>#</th>
 								<th>subject</th>
 								<th>Status</th>
-								<th>edit</th>
-								<th>update</th>
+								<th>Edit</th>
+								<th>Delete</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -51,15 +51,22 @@
 									</div>
 								</td>
 								<td>
-                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
-                                                        </button>
-                                                        
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-trash"></i>
-                                                        </button>
-                                                        
-                                                    </td>
+                           <a href="{{url('subjects/'.$subject->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
+                           </a>
+                        </td>
+                         <td>
+                          
+                                                   <form action="{{ url('subjects', $subject->id) }}" method="POST" id="customer">
+                        @csrf
+                            @method('DELETE')
+ <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     
+
+
+   
+                        </form>
+                           
+                        </td>
+                                                    
 							</tr>
 							@endforeach
 						</tbody>

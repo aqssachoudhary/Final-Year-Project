@@ -104,15 +104,22 @@
                                                 </td>
                                                 
                                                  <td>
-                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
-                                                        </button>
-                                                        
-                                                    </td>
-                                                     <td>
-                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-trash"></i>
-                                                        </button>
-                                                        
-                                                    </td>
+                           <a href="{{url('department/'.$department->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
+                           </a>
+                        </td>
+                        <td>
+                          
+                                                   <form action="{{ url('department', $department->id) }}" method="POST" id="customer">
+                        @csrf
+                            @method('DELETE')
+ <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     
+
+
+   
+                        </form>
+                           
+                        </td>
+                                                    
                                           </tr>
                                           @endforeach
                                     </tbody>
