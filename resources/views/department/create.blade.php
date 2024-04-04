@@ -8,8 +8,8 @@
         
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 <div class="modal-content">
-        <div class="modal-header">
-<h5 class="modal-title">Add Department</h5></div>
+        <div class="page-header ">
+<h3 class="modal-title text-center">Add Department</h3></div>
 
 <div class="modal-body card p-4">
 <form method="post" action="{{url('department')}}">
@@ -19,7 +19,7 @@
 <div class="col-md-6">
 <div class="input-block mb-3">
 <label class="col-form-label">Status <span class="text-danger">*</span></label>
-<select class="select" name="status">
+<select class="select" name="status" required>
 <option>Active</option>
 
 <option>In-Active</option>
@@ -29,8 +29,8 @@
 <div class="col-md-6">
 <div class="input-block mb-3">
 <label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select" name="department">
-<option>Select Department</option>
+<select class="select" name="department" >
+<option >Select Department</option>
 <option>Web Development</option>
 <option>IT Management</option>
 <option>Marketing</option>
@@ -39,8 +39,9 @@
 </div>
 </div>
 
+
 <div class="submit-section">
-<button class="btn btn-success submit-btn" name="submit">Submit</button>
+<button class="btn btn-primary submit-btn" name="submit">Submit</button>
 </div>
 </form>
 </div>

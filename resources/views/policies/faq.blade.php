@@ -19,65 +19,89 @@
 <div class="card">
 <div class="card-header">
 <h4 class="card-title">
-<a class="collapsed" data-bs-toggle="collapse" href="#collapseOne">Anim pariatur cliche reprehenderit?</a>
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseOne">What is an attendance management system?</a>
 </h4>
 </div>
 <div id="collapseOne" class="card-collapse collapse">
 <div class="card-body">
-<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Most industries and institutions have adopted digital innovations and use time attendance tools like biometric attendance systems. With the help of the system, it is easy to track your employee’s attendance and time. The system uses advanced technologies like a fingerprint to recognize and grant access to the employees.
+
+The biometric attendance systems are safe and are used in hospitals, offices, schools, banks, etc. One of the system’s primary functions is to track the employees’ in and out timings. However, why is it important? In this article, we will be discussing this topic.</p>
 </div>
 </div>
 </div>
 <div class="card">
 <div class="card-header">
 <h4 class="card-title">
-<a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">Parsnip lotus root celery?</a>
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">What is an online attendance management system?</a>
 </h4>
 </div>
 <div id="collapseTwo" class="card-collapse collapse">
 <div class="card-body">
-<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>The online difference between a normal attendance system and an online attendance system is the access of data through web login. 
+
+It comes with cloud-enabled technology making the process of data backup and access easy from anytime, anywhere. Here daily attendance gets records to the online database and also provides virtual logins and logouts from any location.</p>
 </div>
 </div>
 </div>
 <div class="card">
 <div class="card-header">
 <h4 class="card-title">
-<a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">Ad vegan excepteur butcher ?</a>
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">Is it safe to use an attendance management system?</a>
 </h4>
 </div>
 <div id="collapseThree" class="card-collapse collapse">
 <div class="card-body">
-<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>The best attendance management systems provider Star Link designs every device with high-security systems and architecture in mind. Biometric solutions, in particular, are extremely dependable and secure and can help businesses in multiple ways.
+
+</p>
 </div>
 </div>
 </div>
 <div class="card">
 <div class="card-header">
 <h4 class="card-title">
-<a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">Ad vegan excepteur butcher vice lomo?</a>
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">What are the main motives for adopting the attendance monitoring system?</a>
 </h4>
 </div>
 <div id="collapseFour" class="card-collapse collapse">
 <div class="card-body">
-<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>
+<ul>
+	<li>Marketing of absence and presence in a simple way for salary processing</li>
+
+<li>Employee’s payroll calculation and leave management</li>
+
+<li>Keeping a tap on time theft </li>
+
+<li>Tracking the attendance</li>
+
+<li>Record hours of employees put into the work</li>
+
+<li>Paperwork reduction and error elimination</li>
+
+Easy to get attendance reports for daily, weekly, monthly, or custom date range
+
+Reduction of the burden from administration, Hr department, account department, etc
+
+Preventing data manipulation
+
+Improving overall work culture and productivity
+
+Accessible data from any time, anywhere
+</ul></p>
 </div>
 </div>
 </div>
 <div class="card">
 <div class="card-header">
 <h4 class="card-title">
-<a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">Cupidatat skateboard dolor brunch?</a>
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">What is attendance system software?</a>
 </h4>
 </div>
 <div id="collapseFive" class="card-collapse collapse">
 <div class="card-body">
-<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<p>Attendance software is a system that reduces the workload from the administration concerning attendance. With its help, businesses can easily manage the tedious attendance process with accurate reports, understandable attendance records, and much more.</p>
 </div>
 </div>
 </div>

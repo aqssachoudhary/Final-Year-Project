@@ -15,8 +15,8 @@
 		<div class="row ">
 			<div class="col-md-12">
 				<div class="table-responsive card p-3">
-					<table class="table  custom-table datatable leave-employee-table" id="myTable">
-						<thead>
+					<table class="table  custom-table datatable leave-employee-table " id="myTable">
+						<thead class="table-dark">
 							<tr>
 								<th>#</th>
 								<th>subject</th>
@@ -37,7 +37,7 @@
 								<td>
 									<div class="user-add-shedule-list">
 										<h2>
-										<a href="#" data-bs-toggle="modal" data-bs-target="#edit_schedule" >
+										<a href="#" data-bs-toggle="modal" >
 											<span class="username-info m-b-10">{{$subject->name}}</span>
 										</a>
 										</h2>
@@ -45,7 +45,7 @@
 								</td>
 								<td>
 									<div class="user-add-shedule-list">
-										<a href="#" data-bs-toggle="modal" data-bs-target="#add_schedule">
+										<a href="#" data-bs-toggle="modal" >
 											<span>{{$subject->status}}</span>
 										</a>
 									</div>

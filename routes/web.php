@@ -39,9 +39,10 @@ Route::post('session-year','SessionYearController@store');
 //classes
 Route::get('classes','ClassesController@index');
 Route::get('classes/create','ClassesController@create');
-Route::get('classes/{id}/edit','ClassesController@edit');
-
 Route::post('classes','ClassesController@store');
+Route::get('classes/{id}/edit','ClassesController@edit');
+Route::put('classes/{id}','ClassesController@update');
+
 //subject
 Route::get('subject','SubjectController@index');
 Route::get('subject/create','SubjectController@create');
@@ -51,9 +52,10 @@ Route::get('section','SectionController@index');
 Route::get('section/create','SectionController@create');
 Route::post('section','SectionController@store');
 //pages
-Route::get('terms','TermsController@index');
-Route::get('privacy','TermsController@privacy');
+
+Route::get('privacy','TermsController@index');
 Route::get('faq','TermsController@faq');
 });
+
 
 

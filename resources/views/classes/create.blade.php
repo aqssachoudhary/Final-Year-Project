@@ -8,24 +8,24 @@
         
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 <div class="modal-content">
-        <div class="modal-header">
-<h5 class="modal-title">Add clasess</h5></div>
+        <div class="page-header">
+<h3 class="modal-title text-center">Add Clasess</h3></div>
 
 <div class="modal-body card p-4">
-<form method="post" action="{{url('classes')}}">
+<form method="post" action="{{url('classes')}}" id="myForm" data-validate="true" data-checkrealtime="true" >
     @csrf
-<div class="row">
+<div class="row form-group">
 <div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label"> Class Name <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="name">
+<input class="form-control" type="text" name="name" required>
 </div>
 </div>
 
 <div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">status <span class="text-danger">*</span></label>
-<select class="select" name="status">
+<select class="select" name="status" required>
 
 <option>active</option>
 <option>in-active</option>
@@ -35,7 +35,7 @@
 
 
 <div class="submit-section">
-<button class="btn btn-success submit-btn" name="submit">Submit</button>
+<button class="btn btn-primary submit-btn" name="submit">Submit</button>
 </div>
 </form>
 </div>

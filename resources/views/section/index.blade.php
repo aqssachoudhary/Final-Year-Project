@@ -27,7 +27,7 @@
 <div class="col-md-12">
 <div class="table-responsive">
 <table class="table table-striped custom-table datatable leave-employee-table">
-<thead>
+<thead class="table-dark">
 <tr>
 <th>#</th>
 <th>classes ID</th>

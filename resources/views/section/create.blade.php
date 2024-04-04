@@ -8,8 +8,8 @@
         
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 <div class="modal-content">
-        <div class="modal-header">
-<h5 class="modal-title">Add Sections</h5></div>
+        <div class="page-header">
+<h3 class="modal-title text-center">Add Sections</h3></div>
 
 <div class="modal-body card p-4">
 <form method="post" action="{{url('section')}}">
@@ -18,7 +18,7 @@
 <div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">Name <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="name">
+<input class="form-control" type="text" name="name" required>
 </div>
 </div>
 
@@ -26,9 +26,9 @@
 <div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">Class ID <span class="text-danger">*</span></label>
-<select class="form-control" name="id">
+<select class="form-control" name="class_id" required>
     @foreach($classes as $class)
-    <option>{{$class->name}}</option>
+    <option value="{{$class->id}}">{{$class->name}}</option>
     @endforeach
 </select>
 </div>
@@ -37,7 +37,7 @@
 <div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">status <span class="text-danger">*</span></label>
-<select class="select" name="status">
+<select class="select" name="status" required>
 
 <option>active</option>
 <option>in-active</option>

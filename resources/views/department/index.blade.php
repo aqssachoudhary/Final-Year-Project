@@ -76,10 +76,10 @@
                  
             </div>
             <div class="row " >
-                  <div class="col-md-12 ">
-                        <div class="table-responsive card p-3">
+                  <div class="col-md-12">
+                        <div class="table-responsive card-body p-5">
                               <table class="table  custom-table datatable leave-employee-table" id="myTable">
-                                    <thead>
+                                    <thead class="table-dark">
                                           <tr>
                                                 <th>#</th>
                                                 

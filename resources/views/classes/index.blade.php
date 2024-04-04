@@ -16,13 +16,13 @@
          <div class="col-md-12">
             <div class="table-responsive">
                <table class="table table-striped custom-table datatable leave-employee-table">
-                  <thead>
+                  <thead class="table-striped table-dark">
                      <tr>
                         <th>#</th>
                         <th>Classes</th>
                         <th>Status</th>
-                        <th>update</th>
-                        <th>edit</th>
+                        <th>Edit</th>
+                        <th>Update</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -55,7 +55,7 @@
                            </a>
                         </td>
                         <td>
-                           <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-trash"></i> </button>
+                           <a href="{{url('classes/'.$class->id.'/update')}}" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-trash"></i> </a>
                            
                         </td>
                      </tr>

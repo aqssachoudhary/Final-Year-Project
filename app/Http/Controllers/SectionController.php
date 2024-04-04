@@ -25,7 +25,7 @@ class SectionController extends Controller
         
 
             $section->name=$request->name;
-             $section->classes_id=$request->id;
+             $section->classes_id=$request->class_id;
               $section->status=$request->status;
               $section->save();
               return redirect('section')->with('success','Record Added');

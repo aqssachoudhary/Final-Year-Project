@@ -8,8 +8,9 @@
                 <div class="modal-header">
                 <h5 class="modal-title">Add clasess</h5></div>
                 <div class="modal-body card p-4">
-                    <form method="post" action="{{url('classes')}}">
+                    <form method="post" action="{{url('classes/'.$class->id)}}">
                         @csrf
+                      @method('put')
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="input-block mb-3">
@@ -27,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-success submit-btn" name="submit">Submit</button>
+                                <button class="btn btn-primary submit-btn" name="submit">Submit</button>
                             </div>
                         </form>
                     </div>

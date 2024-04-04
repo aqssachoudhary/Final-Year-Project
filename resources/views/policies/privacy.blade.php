@@ -8,43 +8,39 @@
 <div class="page-header">
 <div class="row">
 <div class="col-sm-12">
-<h3 class="page-title">Privacy Policy</h3>
-<ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
-<li class="breadcrumb-item active">Privacy Policy</li>
-</ul>
+<h2 class="page-title text-center">Privacy Policy</h2>
+
 </div>
 </div>
 </div>
 
 <div class="row">
 <div class="col-sm-12">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel sodales mauris. Nunc accumsan mi massa, ut maximus magna ultricies et:</p>
-<ol>
-<li>Integer quam odio, ullamcorper id diam in, accumsan convallis libero. Duis at lacinia urna.</li>
-<li>Mauris eget turpis sit amet purus pulvinar facilisis at sed lacus.</li>
-<li>Quisque malesuada volutpat orci, accumsan scelerisque lorem pulvinar vitae.</li>
-<li>Vestibulum sit amet sem aliquam, vestibulum nisi sed, sodales libero.</li>
+<p>The policy applies to (1) our website and mobile applications (“Site”), (2) the products or services offered on or through the Site (“Services”), and (3) communication between you and us, whether it be by email, text message, chat or other electronic means of communication. By interacting with the Site, Services or communicating with us through the Site or Services, you agree to this policy. This policy may be changed at any time and without advanced notice. Your continued use of the Site or Services is deemed to be acceptance of such changes. Please check the policy occasionally for updates. The effective date at the top of this policy will be updated if any changes are made.</p>
 </ol>
-<h4>Aenean accumsan aliquam justo, et rhoncus est ullamcorper at</h4>
-<p>Donec posuere dictum enim, vel sollicitudin orci tincidunt ac. Maecenas mattis ex eu elit tincidunt egestas. Vivamus posuere nunc vel metus bibendum varius. Vestibulum suscipit lacinia eros a aliquam. Sed dapibus arcu eget egestas hendrerit.</p>
-<p>Vivamus consectetur metus at nulla efficitur mattis. Aenean egestas eu odio vestibulum vestibulum. Duis nulla lectus, lacinia vitae nibh vitae, sagittis interdum lacus. Mauris lacinia leo odio, eget finibus lectus pharetra ut. Nullam in semper enim, id gravida nulla.</p>
-<p>Fusce gravida auctor justo, vel lobortis sem efficitur id. Cras eu eros vitae justo dictum tempor.</p>
-<h4>Etiam sed fermentum lectus. Quisque vitae ipsum libero</h4>
-<p>Phasellus sit amet vehicula arcu. Etiam pulvinar dui libero, vitae fringilla nulla convallis in. Fusce sagittis cursus nisl, at consectetur elit vestibulum vestibulum:</p>
-<ul>
-<li>Nunc pulvinar efficitur interdum.</li>
-<li>Donec feugiat feugiat pulvinar.</li>
-<li>Suspendisse eu risus feugiat, pellentesque arcu eu, molestie lorem. </li>
-<li>Duis non leo commodo, euismod ipsum a, feugiat libero.</li>
-</ul>
-<h4>pulvinar</h4>
-<p>Sed sollicitudin, diam nec tristique tincidunt, nulla ligula facilisis nunc, non condimentum tortor leo id ex.</p>
-<p>Vivamus consectetur metus at nulla efficitur mattis. Aenean egestas eu odio vestibulum vestibulum. Duis nulla lectus, lacinia vitae nibh vitae, sagittis interdum lacus. Mauris lacinia leo odio, eget finibus lectus pharetra ut. Nullam in semper enim, id gravida nulla.</p>
-<p>Donec posuere dictum enim, vel sollicitudin orci tincidunt ac. Maecenas mattis ex eu elit tincidunt egestas. Vivamus posuere nunc vel metus bibendum varius. Vestibulum suscipit lacinia eros a aliquam. Sed dapibus arcu eget egestas hendrerit.Donec posuere dictum enim, vel sollicitudin orci tincidunt ac. Maecenas mattis ex eu elit tincidunt egestas. Vivamus posuere nunc vel metus bibendum varius. Vestibulum suscipit lacinia eros a aliquam. Sed dapibus arcu eget egestas hendrerit.</p>
-<h4>efficitur</h4>
-<p>Fusce gravida auctor justo, vel lobortis sem efficitur id. Cras eu eros vitae justo dictum tempor.</p>
-<p><strong>Vivamus posuere nunc vel metus bibendum varius. Vestibulum suscipit lacinia eros a aliquam. Sed dapibus arcu eget egestas hendrerit.Donec posuere dictum enim, vel sollicitudin orci tincidunt ac.</strong></p>
+<h4>Personal Information Collected</h4>
+<p>Attendance on Demand collects and manages information for business contacts, such as marketing contacts and website visitors, differently from employment information necessary for the workforce management services we deliver to our clients. The following sections describe this information and how it is used.</p>
+<h4>Site Monitoring</h4>
+<p>Attendance on Demand, or its Service Providers may send a cookie to your computer or use web beacons to gather statistical information when you visit our site. Neither cookies nor web beacons personally identify you.
+
+A cookie is a piece of data that a website can send to your browser, which is then stored on your computer as an anonymous tag that identifies your computer. When a visitor accesses certain pages on the Site an anonymous notice of that visit is generated which may be processed by us or by our Service Providers. Web beacons work in conjunction with cookies to let us know what portions of the Site are of interest to you and to help us provide you with tailored information from our Site. We use the information primarily to provide you with a personalized Internet experience that delivers information, resources, and services that are most relevant and helpful to you.
+<br>
+If you never provide us with Personal Data, then your visits - despite us using cookies or web beacons - are anonymous. We don't know the actual person linked with the cookie or web beacon.
+
+If you do provide Personal Data, then we are capable of linking your Personal Data with your cookie, then gather the visits with web beacons and understand how you personally have acted when visiting the Site.
+
+Browsers can be set to accept or reject cookies or notify you when a cookie is being sent. If you turn off cookies, web beacon technology will still detect anonymous visits, but the notices they generate cannot be associated with other anonymous information or Personal Data and are disregarded.
+<br>
+
+“Do Not Track” is a preference you can set in your web browser to let websites you visit know that you do not want them collecting information about you. This is an optional feature that each website may choose to respond or not respond to when requests are received. At this time, this Site does not respond to Do Not Track or other similar signals.
+
+Third-party vendors, including Google (www.google.com/policies/privacy/partners/) and Facebook, show Attendance on Demand ads on sites across the Internet. Third-party vendors, including Google, may use cookies and/or web beacons to serve ads based on past visits to our website. You may be able to opt out of a third-party vendor's use of cookies by visiting the Network Advertising Initiative opt-out page.</p>
+<h4>Privacy Policies of Third Parties</h4>
+<p>This policy only addresses the use and disclosure of information by Attendance on Demand. Other websites, application and platforms may be accessible through this Site or Services and have their own privacy policies and data collection, use and disclosure practices. Our affiliates and business partners have their own privacy policies too. We encourage you to familiarize yourself with the privacy policies provided by all third parties prior to providing them with information.</p>
+<h4>Updating Your Information</h4>
+<p>If we receive and use your Personal Information in the context of providing services to your employer, contact your employer to correct or update this information.
+
+If we collect and use your Personal Information in any other context, you can opt-out or unsubscribe using a link at the bottom of our email communications. You can update or correct your information by emailing us at privacy@attendanceondemand.com.</p>
 </div>
 </div>
 </div>

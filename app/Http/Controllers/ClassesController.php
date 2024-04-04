@@ -22,6 +22,19 @@ class ClassesController extends Controller
         $class=Classes::where('id',$id)->first();
         return view('classes.edit',compact('class'));
     }
+
+     public function update(Request $request,$id)
+    {
+        $class=Classes::where('id',$id)->first();
+          $class->name=$request->name;
+          
+              $class->status=$request->status;
+              $class->save();
+        return redirect('classes')->with('success','Record Updated');
+        
+
+    }
+    
     public function store(Request $request)
     {
         $classes= new Classes;

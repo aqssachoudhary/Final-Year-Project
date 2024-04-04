@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+     <link
+      rel="stylesheet"
+      type="text/css"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+     
   
   </head>
   <body>
@@ -1206,9 +1212,7 @@
                   <li>
                     <a href="{{url('faq')}}"> FAQ </a>
                   </li>
-                  <li>
-                    <a href="{{url('terms')}}"> Terms </a>
-                  </li>
+                  
                   <li>
                     <a href="{{url('privacy')}}"> Privacy Policy </a>
                   </li>
@@ -2113,6 +2117,7 @@
 </div>
 <script data-cfasync="false" src="{{asset('cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/jquery.slimscroll.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
@@ -2129,6 +2134,8 @@
 <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
 <script type="text/javascript">
   $(document).ready(function() {
     $('.select-multiple').select2();
@@ -2164,6 +2171,7 @@
             )
         </script>
     @endif
+
 
 </body>
 <!-- Mirrored from smarthr.dreamstechnologies.com/html/template/{{url('/')}} by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 09:24:30 GMT -->
