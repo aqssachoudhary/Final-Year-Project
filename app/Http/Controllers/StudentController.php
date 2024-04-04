@@ -18,6 +18,35 @@ class StudentController extends Controller
     {
         return view('students.create');
     }
+public function edit($id)
+    {
+        $student=User::where('id',$id)->first();
+        return view('students.edit',compact('student'));
+    }
+    public function update(Request $request,$id)
+    {
+        $student=User::where('id',$id)->first();
+        $student->first_name=$request->fname;
+        $student->last_name=$request->lname;
+         $student->email=$request->email;
+          $student->password=Hash::make($request->password);
+            
+        $student->phone=$request->mobile;
+        $student->save();  
+        return redirect('student')->with('success','Record Updated');
+        
+
+    }
+    public function destroy($id)
+    {
+        $student=User::where('id',$id)->first();
+                      $student->delete();
+        return redirect('student')->with('success','Record Deleted');
+        
+
+    }
+
+
      public function store(Request $request)
     {
         

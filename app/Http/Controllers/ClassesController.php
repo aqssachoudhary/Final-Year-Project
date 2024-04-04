@@ -34,6 +34,16 @@ class ClassesController extends Controller
         
 
     }
+
+
+     public function destroy($id)
+    {
+        $class=Classes::where('id',$id)->first();
+                      $class->delete();
+        return redirect('classes')->with('success','Record Deleted');
+        
+
+    }
     
     public function store(Request $request)
     {
