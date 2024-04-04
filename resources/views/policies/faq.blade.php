@@ -1,500 +1,107 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="page-wrapper">
-    <div class="content container-fluid pb-0">
-
-        
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-<div class="modal-content">
-        <div class="modal-header">
-<h5 class="modal-title">Add Department</h5></div>
-
-<div class="modal-body card p-4">
-<form method="post" action="{{url('department')}}">
-    @csrf
+<div class="content container-fluid pb-0">
+<div class="page-header">
 <div class="row">
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="name">
-</div>
-</div>
-
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name=""> 
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Email <span class="text-danger">*</span></label>
-<input class="form-control" type="email" name="email">
-</div>
-</div>
-<div class="col-sm-4">
-<div class="input-block mb-3">
-<label class="col-form-label">Password</label>
-<input class="form-control" type="password" name="password">
-</div>
-</div>
-
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select" name="department">
-<option>Select Department</option>
-<option>Web Development</option>
-<option>IT Management</option>
-<option>Marketing</option>
-</select>
-</div>
-</div>
-
-<div class="submit-section">
-<button class="btn btn-success submit-btn" name="submit">Submit</button>
-</div>
-</form>
-</div>
+<div class="col-sm-12">
+<h3 class="page-title">FAQ</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+<li class="breadcrumb-item active">FAQ</li>
+</ul>
 </div>
 </div>
 </div>
 
+<div class="faq-card">
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseOne">What is an attendance management system?</a>
+</h4>
+</div>
+<div id="collapseOne" class="card-collapse collapse">
+<div class="card-body">
+<p>Most industries and institutions have adopted digital innovations and use time attendance tools like biometric attendance systems. With the help of the system, it is easy to track your employee’s attendance and time. The system uses advanced technologies like a fingerprint to recognize and grant access to the employees.
 
-<div id="edit_employee" class="modal custom-modal fade" role="dialog">
-<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">Edit Employee</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<form>
-<div class="row">
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Student Name <span class="text-danger">*</span></label>
-<input class="form-control" value="John" type="text">
+The biometric attendance systems are safe and are used in hospitals, offices, schools, banks, etc. One of the system’s primary functions is to track the employees’ in and out timings. However, why is it important? In this article, we will be discussing this topic.</p>
 </div>
 </div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Depatment Name</label>
-<input class="form-control" value="Doe" type="text">
 </div>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">What is an online attendance management system?</a>
+</h4>
 </div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Student ID <span class="text-danger">*</span></label>
-<input class="form-control" value="johndoe" type="text">
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Email <span class="text-danger">*</span></label>
-<input class="form-control" value="johndoe@example.com" type="email">
-</div>
-</div>
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Password</label>
-<input class="form-control" value="johndoe" type="password">
-</div>
-</div>
+<div id="collapseTwo" class="card-collapse collapse">
+<div class="card-body">
+<p>The online difference between a normal attendance system and an online attendance system is the access of data through web login. 
 
-<div class="col-sm-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Company</label>
-<select class="select">
-<option>Global Technologies</option>
-<option>Delta Infotech</option>
-<option selected>International Software Inc</option>
-</select>
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select">
-<option>Select Department</option>
-<option>Web Development</option>
-<option>IT Management</option>
-<option>Marketing</option>
-</select>
-</div>
-</div>
-<div class="col-md-6">
-<div class="input-block mb-3">
-<label class="col-form-label">Designation <span class="text-danger">*</span></label>
-<select class="select">
-<option>Select Designation</option>
-<option>Web Designer</option>
-<option>Web Developer</option>
-<option>Android Developer</option>
-</select>
+It comes with cloud-enabled technology making the process of data backup and access easy from anytime, anywhere. Here daily attendance gets records to the online database and also provides virtual logins and logouts from any location.</p>
 </div>
 </div>
 </div>
-<div class="table-responsive m-t-15">
-<table class="table table-striped custom-table">
-<thead>
-<tr>
-<th>Module Permission</th>
-<th class="text-center">Read</th>
-<th class="text-center">Write</th>
-<th class="text-center">Create</th>
-<th class="text-center">Delete</th>
-<th class="text-center">Import</th>
-<th class="text-center">Export</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Holidays</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Leaves</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Clients</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Projects</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Tasks</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Chats</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Assets</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-<tr>
-<td>Timing Sheets</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" checked>
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-<td class="text-center">
-<label class="custom_check">
-<input type="checkbox" name="rememberme" class="rememberme">
-<span class="checkmark"></span>
-</label>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">Is it safe to use an attendance management system?</a>
+</h4>
 </div>
-<div class="submit-section">
-<button class="btn btn-primary submit-btn">Save</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
+<div id="collapseThree" class="card-collapse collapse">
+<div class="card-body">
+<p>The best attendance management systems provider Star Link designs every device with high-security systems and architecture in mind. Biometric solutions, in particular, are extremely dependable and secure and can help businesses in multiple ways.
 
+</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">What are the main motives for adopting the attendance monitoring system?</a>
+</h4>
+</div>
+<div id="collapseFour" class="card-collapse collapse">
+<div class="card-body">
+<p>
+<ul>
+	<li>Marketing of absence and presence in a simple way for salary processing</li>
 
-<div class="modal custom-modal fade" id="delete_employee" role="dialog">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-<div class="modal-body">
-<div class="form-header">
-<h3>Delete Employee</h3>
-<p>Are you sure want to delete?</p>
+<li>Employee’s payroll calculation and leave management</li>
+
+<li>Keeping a tap on time theft </li>
+
+<li>Tracking the attendance</li>
+
+<li>Record hours of employees put into the work</li>
+
+<li>Paperwork reduction and error elimination</li>
+
+Easy to get attendance reports for daily, weekly, monthly, or custom date range
+
+Reduction of the burden from administration, Hr department, account department, etc
+
+Preventing data manipulation
+
+Improving overall work culture and productivity
+
+Accessible data from any time, anywhere
+</ul></p>
 </div>
-<div class="modal-btn delete-action">
-<div class="row">
-<div class="col-6">
-<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
-</div>
-<div class="col-6">
-<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
 </div>
 </div>
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">What is attendance system software?</a>
+</h4>
+</div>
+<div id="collapseFive" class="card-collapse collapse">
+<div class="card-body">
+<p>Attendance software is a system that reduces the workload from the administration concerning attendance. With its help, businesses can easily manage the tedious attendance process with accurate reports, understandable attendance records, and much more.</p>
 </div>
 </div>
 </div>
@@ -837,5 +444,4 @@
 </div>
 </div>
 </div>
-
 @endsection

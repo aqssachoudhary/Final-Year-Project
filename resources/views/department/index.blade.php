@@ -71,91 +71,48 @@
                         </div>
                   </div>
             </div>
-            <div class="row filter-row">
-                  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="input-block mb-3 form-focus">
-                              <input type="text" class="form-control floating">
-                              <label class="focus-label">Employee Name</label>
-                        </div>
-                  </div>
-                  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="input-block mb-3 form-focus select-focus">
-                              <select class="select floating">
-                                    <option> -- Select -- </option>
-                                    <option> Pending </option>
-                                    <option> Approved </option>
-                                    <option> Returned </option>
-                              </select>
-                              <label class="focus-label">Status</label>
-                        </div>
-                  </div>
-                  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="input-block mb-3 form-focus select-focus">
-                              <select class="select floating">
-                                    <option> -- Select -- </option>
-                                    <option> High </option>
-                                    <option> Low </option>
-                                    <option> Medium </option>
-                              </select>
-                              <label class="focus-label">Priority</label>
-                        </div>
-                  </div>
-                  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="input-block mb-3 form-focus">
-                              <div class="cal-icon">
-                                    <input class="form-control floating datetimepicker" type="text">
-                              </div>
-                              <label class="focus-label">From</label>
-                        </div>
-                  </div>
-                  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="input-block mb-3 form-focus">
-                              <div class="cal-icon">
-                                    <input class="form-control floating datetimepicker" type="text">
-                              </div>
-                              <label class="focus-label">To</label>
-                        </div>
-                  </div>
-                  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <a href="#" class="btn btn-success w-100"> Search </a>
-                  </div>
+            
+                  
+                 
             </div>
-            <div class="row">
+            <div class="row " >
                   <div class="col-md-12">
-                        <div class="table-responsive">
-                              <table class="table table-striped custom-table mb-0 datatable">
-                                    <thead>
+                        <div class="table-responsive card-body p-5">
+                              <table class="table  custom-table datatable leave-employee-table" id="myTable">
+                                    <thead class="table-dark">
                                           <tr>
                                                 <th>#</th>
-                                                <th>Student ID</th>
-                                                <th>Student Name</th>
-                                                <th>Email</th>
-                                                <th>Departmemt</th>
+                                                
+                                                <th> Department Name</th>
+                                                <th>status</th>
+                                                <th>Edit</th>
+                                                <th>Update</th>
+                                                
                                           </tr>
                                     </thead>
                                     <tbody>
                                           @foreach($departments as $department)
                                           <tr>
                                                 <td>{{$department->id}}</td>
-                                                <td><a href="ticket-details.html">{{$department->id}}</a></td>
-                                                <td>{{$department->student_name}}</td>
+                                              
+                                                <td>{{$department->name}}</td>
                                                 <td>
                                                       <h2 class="table-avatar">
                                                       <a class="avatar avatar-xs" href="profile.html"><img src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
-                                                      <a href="#">{{$department->email}}</a>
+                                                      <a href="#">{{$department->status}}</a>
                                                       </h2>
                                                 </td>
-                                                <td>{{$department->department}}</td>
-                                                <td class="text-end">
-                                                      <div class="dropdown dropdown-action">
-                                                            <a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                  <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_ticket"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-                                                                  <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_ticket"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-                                                                  <a class="dropdown-item" href="ticket-details.html"><i class="fa-regular fa-eye"></i> Preview</a>
-                                                            </div>
-                                                      </div>
-                                                </td>
+                                                
+                                                 <td>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        
+                                                    </td>
+                                                     <td>
+                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-trash"></i>
+                                                        </button>
+                                                        
+                                                    </td>
                                           </tr>
                                           @endforeach
                                     </tbody>

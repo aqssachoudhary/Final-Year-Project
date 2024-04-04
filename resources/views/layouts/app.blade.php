@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+     <link
+      rel="stylesheet"
+      type="text/css"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+     
+  
   </head>
   <body>
     <div class="main-wrapper">
@@ -1151,14 +1159,12 @@
                 </a>
                 <ul>
                   <li>
-                    <a href="performance-indicator.html"> Performance Indicator </a>
+                    <a href="{{url('classes')}}">All Classes </a>
                   </li>
                   <li>
-                    <a href="performance.html"> Performance Review </a>
+                    <a href="{{url('classes/create')}}">Add Classes </a>
                   </li>
-                  <li>
-                    <a href="performance-appraisal.html"> Performance Appraisal </a>
-                  </li>
+                  
                 </ul>
               </li>
               
@@ -1171,10 +1177,10 @@
                 </a>
                 <ul>
                   <li>
-                    <a href="profile.html"> Employee Profile </a>
+                    <a href="{{url('subject')}}">All Subjects</a>
                   </li>
                   <li>
-                    <a href="client-profile.html"> Client Profile </a>
+                    <a href="{{url('subject/create')}}"> Add Subject </a>
                   </li>
                 </ul>
               </li>
@@ -1185,21 +1191,14 @@
                   <span class="menu-arrow"></span>
                 </a>
                 <ul>
+                  
                   <li>
-                    <a href="index.html"> Login </a>
+                    <a href="{{url('section')}}"> All Sections </a>
                   </li>
                   <li>
-                    <a href="register.html"> Register </a>
+                    <a href="{{url('section/create')}}">Add Sections </a>
                   </li>
-                  <li>
-                    <a href="forgot-password.html"> Forgot Password </a>
-                  </li>
-                  <li>
-                    <a href="otp.html"> OTP </a>
-                  </li>
-                  <li>
-                    <a href="lock-screen.html"> Lock Screen </a>
-                  </li>
+                  
                 </ul>
               </li>
               
@@ -1211,16 +1210,11 @@
                 </a>
                 <ul>
                   <li>
-                    <a href="search.html"> Search </a>
+                    <a href="{{url('faq')}}"> FAQ </a>
                   </li>
+                  
                   <li>
-                    <a href="faq.html"> FAQ </a>
-                  </li>
-                  <li>
-                    <a href="terms.html"> Terms </a>
-                  </li>
-                  <li>
-                    <a href="privacy-policy.html"> Privacy Policy </a>
+                    <a href="{{url('privacy')}}"> Privacy Policy </a>
                   </li>
                   
                 </ul>
@@ -2123,6 +2117,7 @@
 </div>
 <script data-cfasync="false" src="{{asset('cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/jquery.slimscroll.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
@@ -2136,10 +2131,15 @@
 <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
 
 <script src="{{asset('cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="6de4fa2cb1af1d1f9b7737bc-|49" ></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
 <script type="text/javascript">
   $(document).ready(function() {
     $('.select-multiple').select2();
+     $('#myTable').DataTable();
 });
 </script>
 
@@ -2171,6 +2171,7 @@
             )
         </script>
     @endif
+
 
 </body>
 <!-- Mirrored from smarthr.dreamstechnologies.com/html/template/{{url('/')}} by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 09:24:30 GMT -->

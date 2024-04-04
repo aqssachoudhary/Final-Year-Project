@@ -4,22 +4,22 @@
   <div class="content container-fluid pb-0">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 <div class="modal-content">
-        <div class="modal-header">
-<h5 class="modal-title">Add Students</h5></div>
+        <div class="page-header">
+<h3 class="modal-title text-center">Add Students</h3></div>
     <div class="modal-content">
       <div class="modal-body card p-4">
-        <form method="post" action="{{url('student')}}"> @csrf <div class="row">
+        <form method="post" action="{{url('student')}}" > @csrf <div class="row">
             <div class="col-md-6">
               <div class="input-block mb-3">
-                <label class="col-form-label">First Name <span class="text-danger">*</span>
+                <label for="validationCustom01" class="col-form-label">First Name <span class="text-danger">*</span>
                 </label>
-                <input class="form-control" type="text" name="fname">
+                <input class="form-control" type="text" name="fname"  required>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-block mb-3">
                 <label class="col-form-label">Last Name</label>
-                <input class="form-control" type="text" name="lanme">
+                <input class="form-control" type="text" name="lanme" required>
               </div>
             </div>
             <div class="col-md-6">
@@ -33,13 +33,13 @@
               <div class="input-block mb-3">
                 <label class="col-form-label">Email <span class="text-danger">*</span>
                 </label>
-                <input class="form-control floating" type="email" name="email">
+                <input class="form-control floating" type="email" name="email" required>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-block mb-3">
                 <label class="col-form-label">Password</label>
-                <input class="form-control" type="password" name="password">
+                <input class="form-control" type="password" name="password" required>
               </div>
             </div>
             <div class="col-md-6">
@@ -52,7 +52,7 @@
               <div class="input-block mb-3">
                 <label class="col-form-label">Student ID <span class="text-danger">*</span>
                 </label>
-                <input class="form-control floating" type="text">
+                <input class="form-control floating" type="text" required>
               </div>
             </div>
             <div class="col-md-6">
@@ -62,11 +62,17 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="input-block mb-3">
-                <label class="col-form-label">Department Name</label>
-                <input class="form-control" type="text" name="department">
-              </div>
-            </div>
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Department <span class="text-danger">*</span></label>
+                                    <select class="select form-control" name="department" required>
+                                        <option>Select Department</option>
+                                        <option>Web Development</option>
+                                        <option>IT Management</option>
+                                        <option>Marketing</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
           </div>
           
                  
