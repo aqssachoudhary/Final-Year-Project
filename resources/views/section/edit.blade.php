@@ -18,7 +18,7 @@
 <div class="col-sm-4">
 <div class="input-block mb-3">
 <label class="col-form-label">Name <span class="text-danger">*</span></label>
-<input class="form-control" type="text" name="name" required>
+<input class="form-control" type="text" name="name" value="{{$section->name}}">
 </div>
 </div>
 
@@ -27,9 +27,9 @@
 <div class="input-block mb-3">
 <label class="col-form-label">Class ID <span class="text-danger">*</span></label>
 <select class="form-control" name="class_id" required>
-    @foreach($classes as $class)
+   @foreach($classes as $class)
     <option value="{{$class->id}}">{{$class->name}}</option>
-    @endforeach
+    @endforeach  
 </select>
 </div>
 </div>

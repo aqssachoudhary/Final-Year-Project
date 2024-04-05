@@ -21,34 +21,30 @@ class SectionController extends Controller
 public function edit($id)
     {
         $section=Sections::where('id',$id)->first();
-        return view('section.edit',compact('section'));
+         $classes=Classes::get();
+
+        return view('section.edit',compact('section','classes'));
     }
      public function update(Request $request,$id)
     {
         $section=Sections::where('id',$id)->first();
           $section->name=$request->name;
-           $section->classes_id=$request->class_id;
+          
           
               $section->status=$request->status;
               $section->save();
-        return redirect('subject')->with('success','Record Updated');
+        return redirect('section')->with('success','Record Updated');
         
 
     }
 public function destroy($id)
     {
         $section=Sections::where('id',$id)->first();
-                      $subject->delete();
+                      $section->delete();
         return redirect('section')->with('success','Record Deleted');
         
 
     }
-
-
-
-
-
-
 
     public function store(Request $request)
     {
