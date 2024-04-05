@@ -73,13 +73,13 @@
 </div>
 </td>
 <td>
-                           <a href="{{url('sections/'.$section->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
+                           <a href="{{url('section/'.$section->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
                            </a>
                         </td>
             <td>
                 <td>
                           
-                                                   <form action="{{ url('sections', $section->id) }}" method="POST" id="customer">
+                                                   <form action="{{ url('section', $section->id) }}" method="POST" id="customer">
                         @csrf
                             @method('DELETE')
  <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     

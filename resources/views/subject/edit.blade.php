@@ -15,7 +15,7 @@
                             <div class="col-sm-4">
                                 <div class="input-block mb-3">
                                     <label class="col-form-label"> Subject Name <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text" required name="name">
+                                    <input class="form-control" type="text" required name="name" value="{{$subject->name}}">
                                 </div>
                             </div>
                             <div class="col-sm-4">

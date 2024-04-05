@@ -30,8 +30,8 @@
 <div class="col-md-6">
 <div class="input-block mb-3">
 <label class="col-form-label">Department <span class="text-danger">*</span></label>
-<select class="select" name="department" >
-<option >Select Department</option>
+<select class="select" name="department" value="{{$department->name}}">
+ <option >Select Department</option>
 <option>Web Development</option>
 <option>IT Management</option>
 <option>Marketing</option>

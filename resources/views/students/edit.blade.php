@@ -16,13 +16,13 @@
               <div class="input-block mb-3">
                 <label for="validationCustom01" class="col-form-label">First Name <span class="text-danger">*</span>
                 </label>
-                <input class="form-control" type="text" name="fname"  required>
+                <input class="form-control" type="text" name="fname" value="{{$student->first_name}}">
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-block mb-3">
                 <label class="col-form-label">Last Name</label>
-                <input class="form-control" type="text" name="lanme" required>
+                <input class="form-control" type="text" name="lanme" value="{{$student->last_name}}">
               </div>
             </div>
             <div class="col-md-6">
@@ -36,13 +36,13 @@
               <div class="input-block mb-3">
                 <label class="col-form-label">Email <span class="text-danger">*</span>
                 </label>
-                <input class="form-control floating" type="email" name="email" required>
+                <input class="form-control floating" type="email" name="email" value="{{$student->email}}">
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-block mb-3">
                 <label class="col-form-label">Password</label>
-                <input class="form-control" type="password" name="password" required>
+                <input class="form-control" type="password" name="password" >
               </div>
             </div>
             <div class="col-md-6">
@@ -55,7 +55,7 @@
               <div class="input-block mb-3">
                 <label class="col-form-label">Student ID <span class="text-danger">*</span>
                 </label>
-                <input class="form-control floating" type="text" required>
+                <input class="form-control floating" type="text" value="{{$student->id}}">
               </div>
             </div>
             <div class="col-md-6">
@@ -67,11 +67,13 @@
             <div class="col-md-6">
                                 <div class="input-block mb-3">
                                     <label class="col-form-label">Department <span class="text-danger">*</span></label>
-                                    <select class="select form-control" name="department" required>
+                                    <select class="select form-control" name="department" value="{{$student->department}}">
                                         <option>Select Department</option>
                                         <option>Web Development</option>
                                         <option>IT Management</option>
                                         <option>Marketing</option>
+                                          <option>chemistery</option>
+                                            <option>math</option>
                                         
                                     </select>
                                 </div>

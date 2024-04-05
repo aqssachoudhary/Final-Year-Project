@@ -18,6 +18,35 @@ class TeacherController extends Controller
     {
         return view('teachers.create');
     }
+public function edit($id)
+    {
+        $teacher=User::where('id',$id)->first();
+        return view('teachers.edit',compact('teacher'));
+    }
+ public function update(Request $request,$id)
+    {
+        $teacher=User::where('id',$id)->first();
+          $teacher->first_name=$request->fname;
+          
+              $teacher->last_name=$request->lname;
+              $teacher->email=$request->email;
+          $teacher->password=Hash::make($request->password);
+        $teacher->phone=$request->mobile;
+         $teacher->department_id=(int)$request->department;
+            $teacher->save();
+        return redirect('teacher')->with('success','Record Updated');
+        
+
+    }
+public function destroy($id)
+    {
+        $teacher=User::where('id',$id)->first();
+                      $teacher->delete();
+        return redirect('teacher')->with('success','Record Deleted');
+        
+
+    }
+
     public function store(Request $request)
     {
         

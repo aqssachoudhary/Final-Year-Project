@@ -24,6 +24,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('teacher','TeacherController@index');
 Route::get('teacher/create','TeacherController@create');
 Route::post('teacher','TeacherController@store');
+Route::get('teacher/{id}/edit','TeacherController@edit');
+Route::put('teacher/{id}','TeacherController@update');
+Route::delete('teacher/{id}','TeacherController@destroy');
 //Students
 Route::get('student','StudentController@index');
 Route::get('student/create','StudentController@create');
@@ -62,9 +65,9 @@ Route::delete('subjects/{id}','SubjectController@destroy');
 Route::get('section','SectionController@index');
 Route::get('section/create','SectionController@create');
 Route::post('section','SectionController@store');
-Route::get('sections/{id}/edit','SectionController@edit');
-Route::put('sections/{id}','SectionController@update');
-Route::delete('sections/{id}','SectionController@destroy');
+Route::get('section/{id}/edit','SectionController@edit');
+Route::put('section/{id}','SectionController@update');
+Route::delete('section/{id}','SectionController@destroy');
 //pages
 
 Route::get('privacy','TermsController@index');
