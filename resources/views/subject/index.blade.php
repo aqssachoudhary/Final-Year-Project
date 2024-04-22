@@ -8,7 +8,7 @@
 					<h3 class="page-title">Subjects</h3>
 				</div>
 				<div class="col-auto float-end ms-auto">
-					<a href="{{url('subject/create')}}" class="btn add-btn m-r-5"  data-bs-target="#add_schedule"> Add Subjects</a>
+					<a href="{{url('subject/create')}}" class="btn add-btn m-r-5"  data-bs-target="#add_schedule"><i class="fa-solid fa-plus"></i>  Add Subjects</a>
 				</div>
 			</div>
 		</div>

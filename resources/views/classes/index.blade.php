@@ -8,7 +8,7 @@
                <h3 class="page-title">Daily Classes</h3>
             </div>
             <div class="col-auto float-end ms-auto">
-               <a href="{{url('classes/create')}}" class="btn add-btn m-r-5"  data-bs-target="#add_schedule"> Add Classes</a>
+               <a href="{{url('classes/create')}}" class="btn add-btn m-r-5"  data-bs-target="#add_schedule"><i class="fa-solid fa-plus"></i>  Add Classes</a>
             </div>
          </div>
       </div>
