@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SessionYearStudent extends Model
 {
     use HasFactory;
+     protected $table='session_years_student';
 }

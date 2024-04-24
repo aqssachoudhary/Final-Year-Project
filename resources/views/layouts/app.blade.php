@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
+
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
      <link
       rel="stylesheet"
@@ -2123,7 +2125,7 @@
 <script src="{{asset('assets/js/jquery.slimscroll.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/plugins/morris/morris.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/plugins/raphael/raphael.min.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
-<script src="{{asset('assets/js/chart.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
+
 <script src="{{asset('assets/js/greedynav.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/layout.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
 <script src="{{asset('assets/js/theme-settings.js')}}" type="6de4fa2cb1af1d1f9b7737bc-text/javascript"></script>
@@ -2133,9 +2135,9 @@
 <script src="{{asset('cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="6de4fa2cb1af1d1f9b7737bc-|49" ></script>
 <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
 
+
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-
+@yield('js')
 <script type="text/javascript">
   $(document).ready(function() {
     $('.select-multiple').select2();

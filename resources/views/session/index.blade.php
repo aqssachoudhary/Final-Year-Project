@@ -12,7 +12,7 @@
           </ul>
         </div>
         <div class="col-auto float-end ms-auto">
-          <a href="{{url('session/create')}}" class="btn add-btn">
+          <a href="{{url('session-year/create')}}" class="btn add-btn">
             <i class="fa-solid fa-plus"></i> Add Session </a>
         </div>
       </div>
@@ -93,48 +93,32 @@
           <table class="table table-striped custom-table mb-0 datatable">
             <thead>
               <tr>
-                <th>#</th>
-                <th>student name</th>
-                <th>department</th>
-                <th>start-year</th>
-                <th>end-year</th>
-                <th>Status</th>
+               
+                <th>Student Id</th>
+                <th>Start Year</th>
+                <th>End Year</th>
+             
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>
-                  <a href="ticket-details.html">#TKT-0001</a>
-                </td>
-                <td>Laptop Issue</td>
-                <td>
-                  <h2 class="table-avatar">
-                    <a class="avatar avatar-xs" href="profile.html">
-                      <img src="assets/img/profiles/avatar-10.jpg" alt="User Image">
-                    </a>
-                    <a href="#">John Smith</a>
-                  </h2>
-                </td>
-                <td>5 Jan 2019 07:21 AM</td>
-                <td>5 Jan 2019 11.12 AM</td>
-                <td class="text-end">
-                  <div class="dropdown dropdown-action">
-                    <a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="material-icons">more_vert</i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_ticket">
-                        <i class="fa-solid fa-pencil m-r-5"></i> Edit </a>
-                      <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_ticket">
-                        <i class="fa-regular fa-trash-can m-r-5"></i> Delete </a>
-                      <a class="dropdown-item" href="ticket-details.html">
-                        <i class="fa-regular fa-eye"></i> Preview </a>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+       
+  <tbody>
+    @foreach ($sessions as $session)
+        <tr>
+            <td>
+              
+                    {{ $session->student_id }}
+               
+            </td>
+            <td>{{ $session->start_date }}</td>
+            <td>{{ $session->end_date }}</td>
+        </tr>
+    @endforeach
+</tbody>
+
+
+
+
+
           </table>
         </div>
       </div>
