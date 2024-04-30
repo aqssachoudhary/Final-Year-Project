@@ -21,9 +21,9 @@
                             <div class="col-sm-4">
                                 <div class="input-block mb-3">
                                     <label class="col-form-label">status <span class="text-danger">*</span></label>
-                                    <select class="select" name="status">
+                                    <select class="select" name="status" value="{{$class->name}}">
                                         <option @if($class->status=='Active'){{'selcted'}}@endif>active</option>
-                                        <option selected>in-active</option>
+                                        <option value="{{$class->name}}">in-active</option>
                                     </select>
                                 </div>
                             </div>

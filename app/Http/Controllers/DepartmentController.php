@@ -17,6 +17,21 @@ class DepartmentController extends Controller
     {
         return view('department.create');
     }
+
+    public function store(Request $request)
+    {
+        $department= new Department;
+        
+
+            $department->name=$request->name;
+              $department->status=$request->status;
+              $department->save();
+              return redirect('department')->with('success','Record Added');
+
+        
+    }
+
+    
 public function edit($id)
     {
         $department=Department::where('id',$id)->first();
@@ -25,7 +40,7 @@ public function edit($id)
  public function update(Request $request,$id)
     {
         $department=Department::where('id',$id)->first();
-          $department->name=$request->department;
+          $department->name=$request->name;
           
               $department->status=$request->status;
               $department->save();
@@ -46,16 +61,5 @@ public function edit($id)
 
 
 
-    public function store(Request $request)
-    {
-        $department= new Department;
-        
-
-            $department->name=$request->department;
-              $department->status=$request->status;
-              $department->save();
-              return redirect('department')->with('success','Record Added');
-
-        
-    }
+    
 }

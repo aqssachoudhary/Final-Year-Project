@@ -5,7 +5,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add Students</h5>
+                    <h5 class="modal-title">Add Session</h5>
                 </div>
                 <div class="modal-body card p-4">
                     <form method="post" action="{{ url('session-year') }}">
@@ -33,7 +33,7 @@
                                     </select>
                                 </div>
                             </div>
-                           <div class="col-md-6">
+                           
    <div class="col-md-6">
     <div class="input-block mb-3">
         <label class="col-form-label">Students <span class="text-danger">*</span></label>

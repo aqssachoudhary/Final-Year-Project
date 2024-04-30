@@ -21,6 +21,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/get-student-count', 'HomeController@getStudentCount');
 
 
 Route::get('teacher','TeacherController@index');
@@ -47,6 +48,8 @@ Route::delete('department/{id}','DepartmentController@destroy');
 Route::get('session-year','SessionYearController@index');
 Route::get('session-year/create','SessionYearController@create');
 Route::post('session-year','SessionYearController@store');
+Route::get('session-year/{id}/edit','SessionYearController@edit');
+Route::delete('session-year/{id}','SessionYearController@destroy');
 //classes
 Route::get('classes','ClassesController@index');
 Route::get('classes/create','ClassesController@create');

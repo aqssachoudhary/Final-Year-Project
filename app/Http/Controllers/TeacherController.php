@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Department;
 use Hash;
 use Spatie\Permission\Models\Role;
 
@@ -16,23 +17,26 @@ class TeacherController extends Controller
     }
     public function create()
     {
-        return view('teachers.create');
+        $departments=Department::orderBy('id', 'DESC')->get();
+        return view('teachers.create',compact('departments'));
     }
 public function edit($id)
     {
         $teacher=User::where('id',$id)->first();
-        return view('teachers.edit',compact('teacher'));
+        $departments=Department::orderBy('id', 'DESC')->get();
+        return view('teachers.edit',compact('teacher','departments'));
     }
  public function update(Request $request,$id)
     {
         $teacher=User::where('id',$id)->first();
-          $teacher->first_name=$request->fname;
-          
-              $teacher->last_name=$request->lname;
+          $teacher->first_name=$request->first_name;
+              $teacher->last_name=$request->last_name;
+          $teacher->username=$request->username;
               $teacher->email=$request->email;
           $teacher->password=Hash::make($request->password);
-        $teacher->phone=$request->mobile;
-         $teacher->department_id=(int)$request->department;
+        $teacher->mobile=$request->mobile;
+        $teacher->address=$request->address;
+         $teacher->department_id=$request->department_id;
             $teacher->save();
         return redirect('teacher')->with('success','Record Updated');
         
@@ -52,12 +56,14 @@ public function destroy($id)
         
         $teacher= new User;
         
-        $teacher->first_name=$request->fname;
-        $teacher->last_name=$request->lname;
+        $teacher->first_name=$request->first_name;
+        $teacher->last_name=$request->last_name;
+        $teacher->username=$request->username;
          $teacher->email=$request->email;
           $teacher->password=Hash::make($request->password);
-        $teacher->phone=$request->mobile;
-         $teacher->department_id=(int)$request->department;
+        $teacher->mobile=$request->mobile;
+         $teacher->address=$request->address;
+         $teacher->department_id=$request->department_id;
          
          $teacher->save();
 

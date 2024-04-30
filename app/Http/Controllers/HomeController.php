@@ -11,6 +11,7 @@ use App\Models\Department;
 use App\Models\SessionYear;
 use App\Charts\studentsChart;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -45,7 +46,13 @@ class HomeController extends Controller
         $teacherCount = User::whereHas('roles', function ($query) {
             $query->where('name', 'Teacher');
         })->count();
+        $classCount=Classes::count();
 
-        return view('home', compact('studentsChart', 'departmentCount', 'studentCount', 'teacherCount'));
+        $departments=Department::all();
+        $sessions=SessionYear::all();
+
+        return view('home', compact('studentsChart', 'departmentCount', 'studentCount', 'teacherCount','classCount','departments','sessions'));
     }
+    
+
 }

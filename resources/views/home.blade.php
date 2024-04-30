@@ -24,6 +24,17 @@
 					</div>
 				</div>
 			</div>
+			 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="card dash-widget">
+                    <div class="card-body">
+                        <span class="dash-widget-icon"><i class="fa-solid fa-cubes"></i></span>
+                        <div class="dash-widget-info ">
+                            <h3>{{ $classCount }}</h3>
+                            <span><b>Classes</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
 				<div class="card dash-widget">
 					<div class="card-body">
@@ -38,14 +49,16 @@
 			<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
 				<div class="card dash-widget">
 					<div class="card-body">
-						<span class="dash-widget-icon"><i class="fa-solid fa-user"></i></span>
-						<div class="dash-widget-info">
+						<span class="dash-widget-icon"><i class="fa-solid fa-user" href="students"></i></span>
+						<div class="dash-widget-info" >
 							<h3>{{ $studentCount }}</h3>
 							<span><b>Students</b></span>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			
 			<!-- <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
 				<div class="card dash-widget">
 					<div class="card-body">
@@ -58,146 +71,53 @@
 				</div>
 			</div> -->
 		</div>
-		<div class="col-md-12 ">
-		<div class="col-md-10 container px-4 mx-auto">
-    <div class="p-6 m-20 bg-white rounded shadow">
-                                 {!! $studentsChart->container() !!}
-                            </div>
-                            </div>
-	</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card-group m-b-30">
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between mb-3">
-								<div>
-									<span class="d-block">New Employees</span>
-								</div>
-								<div>
-									<span class="text-success">+10%</span>
-								</div>
-							</div>
-							<h3 class="mb-3">10</h3>
-							<div class="progress height-five mb-2">
-								<div class="progress-bar bg-primary w-70" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<p class="mb-0">Overall Employees 218</p>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between mb-3">
-								<div>
-									<span class="d-block">Earnings</span>
-								</div>
-								<div>
-									<span class="text-success">+12.5%</span>
-								</div>
-							</div>
-							<h3 class="mb-3">$1,42,300</h3>
-							<div class="progress height-five mb-2">
-								<div class="progress-bar bg-primary w-70" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<p class="mb-0">Previous Month <span class="text-muted">$1,15,852</span></p>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between mb-3">
-								<div>
-									<span class="d-block">Expenses</span>
-								</div>
-								<div>
-									<span class="text-danger">-2.8%</span>
-								</div>
-							</div>
-							<h3 class="mb-3">$8,500</h3>
-							<div class="progress height-five mb-2">
-								<div class="progress-bar bg-primary w-70" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<p class="mb-0">Previous Month <span class="text-muted">$7,500</span></p>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between mb-3">
-								<div>
-									<span class="d-block">Profit</span>
-								</div>
-								<div>
-									<span class="text-danger">-75%</span>
-								</div>
-							</div>
-							<h3 class="mb-3">$1,12,000</h3>
-							<div class="progress height-five mb-2">
-								<div class="progress-bar bg-primary w-70" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-							<p class="mb-0">Previous Month <span class="text-muted">$1,42,000</span></p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-12 mb-4">
+			<div class=" mx-auto">
+   				<div class="p-6 m-20 bg-white rounded shadow">
+                        {!! $studentsChart->container() !!}
+                </div>
+            </div>
 		</div>
 	
-		<div class="row">
+	
+	<div class="row mt-4">
+    	<div class="row">
 			<div class="col-md-6 d-flex">
 				<div class="card card-table flex-fill">
 					<div class="card-header">
-						<h3 class="card-title mb-0">Invoices</h3>
+						<h3 class="card-title mb-0">Sessions</h3>
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">
-							<table class="table table-nowrap custom-table mb-0">
-								<thead>
-									<tr>
-										<th>Invoice ID</th>
-										<th>Client</th>
-										<th>Due Date</th>
-										<th>Total</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href="invoice-view.html">#INV-0001</a></td>
-										<td>
-											<h2><a href="#">Global Technologies</a></h2>
-										</td>
-										<td>11 Mar 2019</td>
-										<td>$380</td>
-										<td>
-											<span class="badge bg-inverse-warning">Partially Paid</span>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="invoice-view.html">#INV-0002</a></td>
-										<td>
-											<h2><a href="#">Delta Infotech</a></h2>
-										</td>
-										<td>8 Feb 2019</td>
-										<td>$500</td>
-										<td>
-											<span class="badge bg-inverse-success">Paid</span>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="invoice-view.html">#INV-0003</a></td>
-										<td>
-											<h2><a href="#">Cream Inc</a></h2>
-										</td>
-										<td>23 Jan 2019</td>
-										<td>$60</td>
-										<td>
-											<span class="badge bg-inverse-danger">Unpaid</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							<table class="table table-striped custom-table mb-0 datatable">
+					             <thead class="table-dark">
+					              <tr>
+					               <th> Id</th>
+					                <th>Start Year</th>
+					                <th>End Year</th>
+					             
+					             
+					              </tr>
+					            </thead>
+					       
+					  <tbody>
+						    @foreach ($sessions as $session)
+						            <tr>
+						                <td>{{ $session->id }}</td> 
+						            <td>{{ $session->start_date }}</td>
+						            <td>{{ $session->end_date }}</td>
+
+
+						 
+						        </tr>
+						    @endforeach
+						</tbody>
+         	 </table>
+
 						</div>
 					</div>
 					<div class="card-footer">
-						<a href="invoices.html">View all invoices</a>
+						<a href="{{url('session-year')}}">View all details</a>
 					</div>
 				</div>
 			</div>
@@ -205,144 +125,51 @@
 			<div class="col-md-6 d-flex">
 				<div class="card card-table flex-fill">
 					<div class="card-header">
-						<h3 class="card-title mb-0">Recent Projects</h3>
+						<h3 class="card-title mb-0"> Department</h3>
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">
-							<table class="table custom-table mb-0">
-								<thead>
-									<tr>
-										<th>Project Name </th>
-										<th>Progress</th>
-										<th class="text-end">Action</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<h2><a href="project-view.html">Office Management</a></h2>
-											<small class="block text-ellipsis">
-											<span>1</span> <span class="text-muted">open tasks, </span>
-											<span>9</span> <span class="text-muted">tasks completed</span>
-											</small>
-										</td>
-										<td>
-											<div class="progress progress-xs progress-striped">
-												<div class="progress-bar w-65" role="progressbar" data-bs-toggle="tooltip" title="65%"></div>
-											</div>
-										</td>
-										<td class="text-end">
-											<div class="dropdown dropdown-action">
-												<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<h2><a href="project-view.html">Project Management</a></h2>
-											<small class="block text-ellipsis">
-											<span>2</span> <span class="text-muted">open tasks, </span>
-											<span>5</span> <span class="text-muted">tasks completed</span>
-											</small>
-										</td>
-										<td>
-											<div class="progress progress-xs progress-striped">
-												<div class="progress-bar w-15" role="progressbar" data-bs-toggle="tooltip" title="15%"></div>
-											</div>
-										</td>
-										<td class="text-end">
-											<div class="dropdown dropdown-action">
-												<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<h2><a href="project-view.html">Video Calling App</a></h2>
-											<small class="block text-ellipsis">
-											<span>3</span> <span class="text-muted">open tasks, </span>
-											<span>3</span> <span class="text-muted">tasks completed</span>
-											</small>
-										</td>
-										<td>
-											<div class="progress progress-xs progress-striped">
-												<div class="progress-bar w-50" role="progressbar" data-bs-toggle="tooltip" title="50%"></div>
-											</div>
-										</td>
-										<td class="text-end">
-											<div class="dropdown dropdown-action">
-												<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<h2><a href="project-view.html">Hospital Administration</a></h2>
-											<small class="block text-ellipsis">
-											<span>12</span> <span class="text-muted">open tasks, </span>
-											<span>4</span> <span class="text-muted">tasks completed</span>
-											</small>
-										</td>
-										<td>
-											<div class="progress progress-xs progress-striped">
-												<div class="progress-bar w-88" role="progressbar" data-bs-toggle="tooltip" title="88%"></div>
-											</div>
-										</td>
-										<td class="text-end">
-											<div class="dropdown dropdown-action">
-												<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<h2><a href="project-view.html">Digital Marketplace</a></h2>
-											<small class="block text-ellipsis">
-											<span>7</span> <span class="text-muted">open tasks, </span>
-											<span>14</span> <span class="text-muted">tasks completed</span>
-											</small>
-										</td>
-										<td>
-											<div class="progress progress-xs progress-striped">
-												<div class="progress-bar w-100" role="progressbar" data-bs-toggle="tooltip" title="100%"></div>
-											</div>
-										</td>
-										<td class="text-end">
-											<div class="dropdown dropdown-action">
-												<a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-solid fa-pencil m-r-5"></i> Edit</a>
-													<a class="dropdown-item" href="javascript:void(0)"><i class="fa-regular fa-trash-can m-r-5"></i> Delete</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							 <table class="table  custom-table datatable leave-employee-table" id="myTable">
+                                    <thead class="table-dark">
+                                          <tr>
+                                                <th>Id</th>
+                                                
+                                                <th> Department Name</th>
+                                                <th>status</th>
+                                                
+                                                
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                          @foreach($departments as $department)
+                                          <tr>
+                                                <td>{{$department->id}}</td>
+                                              
+                                                <td>{{$department->name}}</td>
+                                                <td>
+                                                      <h2 class="table-avatar">
+                                                      <a class="avatar avatar-xs" href="profile.html"><img src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
+                                                      <a href="#">{{$department->status}}</a>
+                                                      </h2>
+                                                </td>
+                                                
+                                              
+                                                    
+                                          </tr>
+                                          @endforeach
+                                    </tbody>
+                              </table>
 						</div>
 					</div>
 					<div class="card-footer">
-						<a href="projects.html">View all projects</a>
+						<a href="{{url('department')}}">View all details</a>
 					</div>
 				</div>
 			</div>
 		</div>
+    
+</div>
+
 	</div>
 </div>
 </div>
