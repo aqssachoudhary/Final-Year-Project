@@ -18,11 +18,11 @@
 					<table class="table  custom-table datatable leave-employee-table " id="myTable">
 						<thead class="table-dark">
 							<tr>
-								<th>#</th>
-								<th>subject</th>
+								<th>Id</th>
+								<th>Subject</th>
 								<th>Status</th>
-								<th>Edit</th>
-								<th>Delete</th>
+								<th>Action</th>
+							
 							</tr>
 						</thead>
 						<tbody>
@@ -53,8 +53,7 @@
 								<td>
                            <a href="{{url('subjects/'.$subject->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
                            </a>
-                        </td>
-                         <td>
+                       
                           
                                                    <form action="{{ url('subjects', $subject->id) }}" method="POST" id="customer">
                         @csrf

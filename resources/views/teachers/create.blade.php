@@ -15,13 +15,13 @@
                             <div class="col-sm-6">
                                 <div class="input-block mb-3">
                                     <label class="col-form-label">First Name <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text" name="fname" required>
+                                    <input class="form-control" type="text" name="first_name" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-block mb-3">
                                     <label class="col-form-label">Last Name</label>
-                                    <input class="form-control" type="text" name="lname" required>
+                                    <input class="form-control" type="text" name="last_name" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -38,39 +38,39 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-block mb-3">
-                                    <label class="col-form-label">Password</label>
+                                    <label class="col-form-label">Password</label><span class="text-danger">*</span>
                                     <input class="form-control" type="password" name="password" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-block mb-3">
-                                    <label class="col-form-label">Confirm Password</label>
+                                    <label class="col-form-label">Confirm Password</label><span class="text-danger">*</span>
                                     <input class="form-control" type="password" name="cnfrm_password">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="input-block mb-3">
-                                    <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" required>
                                 </div>
                             </div>
                             
                             <div class="col-sm-6">
                                 <div class="input-block mb-3">
-                                    <label class="col-form-label">Phone </label>
-                                    <input class="form-control" type="text" name="mobile">
+                                    <label class="col-form-label">Mobile No </label>
+                                    <input class="form-control" type="number" name="mobile">
                                 </div>
                             </div>
+                             <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                <label class="col-form-label">Address <span class="text-danger">*</span>
+                </label>
+                <input class="form-control" type="text" name="address">
+              </div>
+             </div>
                             <div class="col-md-6">
                                 <div class="input-block mb-3">
                                     <label class="col-form-label">Department <span class="text-danger">*</span></label>
-                                    <select class="select form-control" name="department" required>
-                                        <option>Select Department</option>
-                                        <option>Web Development</option>
-                                        <option>IT Management</option>
-                                        <option>Marketing</option>
-                                        
-                                    </select>
+                                     <select class="form-select select" name="department_id" aria-label="Default select example" required>
+                                          <option>Select Department</option>
+                                            @foreach ( $departments as $department)
+                                            <option value={{$department->id}}>{{$department->name}}</option>
+                                            @endforeach
+                                        </select>
                                 </div>
                             </div>
                             <div class="submit-section">
