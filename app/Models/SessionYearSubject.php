@@ -16,4 +16,8 @@ class SessionYearSubject extends Model
     {
         return $this->belongsTo(SessionYear::class, 'session_years_id');
     }
+
+    public function subjectDetail(){
+         return $this->belongsTo(Subject::class, 'subject_id');
+    }
 }

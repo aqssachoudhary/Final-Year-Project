@@ -41,8 +41,7 @@
 					<h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">{{$student->first_name}}</a></h4>
 					<h5 class="user-name m-t-10 mb-0 text-ellipsis"><a href="client-profile.html">{{$student->last_name}}</a></h5>
 					<div class="small text-muted">{{$student->department}}</div>
-					<a href="chat.html" class="btn btn-white btn-sm m-t-10">Message</a>
-					<a href="client-profile.html" class="btn btn-white btn-sm m-t-10">View Profile</a>
+				
 				</div>
 			</div>
 		@endforeach

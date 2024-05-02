@@ -3,12 +3,12 @@
     <div class="page-header">
       <div class="row align-items-center">
         <div class="col">
-          <h3 class="page-title">Sessions</h3>
+          <h3 class="page-title">Session Year</h3>
           <ul class="breadcrumb">
             <li class="breadcrumb-item">
               <a href="admin-dashboard.html">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Sessions</li>
+            <li class="breadcrumb-item active">Session Year</li>
           </ul>
         </div>
         <div class="col-auto float-end ms-auto">
@@ -55,16 +55,17 @@
             <td>{{ $session->end_date }}</td>
 
 
-<td>
-                           <a href="{{url('session-year/'.$session->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
+<td class="d-flex">
+                           <a href="{{url('session-year/'.$session->id.'/edit')}}" class="btn btn-info btn-sm " data-toggle="modal" data-target="#ordine">Edit
                            </a>
                        
                           
                                                    <form action="{{ url('session-year', $session->id) }}" method="POST" id="customer">
                         @csrf
                             @method('DELETE')
- <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     
-
+ <button type="submit" class="actionBtn mr-1 btn btn-danger btn-sm " style="margin-left: 2px;" onclick="return confirm('Are You Sure You Want To Delete?')">Delete</button>     
+ <a href="{{url('session-year/'.$session->id.'/show')}}" class="btn btn-success btn-sm text-white " data-toggle="modal" data-target="#ordine">Teachers
+                           </a>
 
    
                         </form>

@@ -49,6 +49,9 @@ Route::get('session-year','SessionYearController@index');
 Route::get('session-year/create','SessionYearController@create');
 Route::post('session-year','SessionYearController@store');
 Route::get('session-year/{id}/edit','SessionYearController@edit');
+Route::get('session-year/{id}/show','SessionYearController@show');
+
+Route::get('assign_teacher/{sub}/{year}/{teacher}','SessionYearController@assignTeacher');
 Route::delete('session-year/{id}','SessionYearController@destroy');
 //classes
 Route::get('classes','ClassesController@index');
@@ -74,6 +77,7 @@ Route::get('section/{id}/edit','SectionController@edit');
 Route::put('section/{id}','SectionController@update');
 Route::delete('section/{id}','SectionController@destroy');
 //pages
+Route::get('logout', 'HomeController@logout');
 
 Route::get('privacy','TermsController@index');
 Route::get('faq','TermsController@faq');
