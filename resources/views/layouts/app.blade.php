@@ -19,11 +19,11 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="{{asset('https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css')}}" />
      <link
       rel="stylesheet"
       type="text/css"
-      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+      href="{{asset('maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')}}"
     />
      
   
