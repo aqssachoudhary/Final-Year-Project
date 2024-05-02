@@ -30,6 +30,8 @@ Route::post('teacher','TeacherController@store');
 Route::get('teacher/{id}/edit','TeacherController@edit');
 Route::put('teacher/{id}','TeacherController@update');
 Route::delete('teacher/{id}','TeacherController@destroy');
+
+Route::get('my-classes','TeacherController@myClasses');
 //Students
 Route::get('student','StudentController@index');
 Route::get('student/create','StudentController@create');
@@ -49,6 +51,9 @@ Route::get('session-year','SessionYearController@index');
 Route::get('session-year/create','SessionYearController@create');
 Route::post('session-year','SessionYearController@store');
 Route::get('session-year/{id}/edit','SessionYearController@edit');
+Route::get('session-year/{id}/show','SessionYearController@show');
+
+Route::get('assign_teacher/{sub}/{year}/{teacher}','SessionYearController@assignTeacher');
 Route::delete('session-year/{id}','SessionYearController@destroy');
 //classes
 Route::get('classes','ClassesController@index');
@@ -74,9 +79,18 @@ Route::get('section/{id}/edit','SectionController@edit');
 Route::put('section/{id}','SectionController@update');
 Route::delete('section/{id}','SectionController@destroy');
 //pages
+Route::get('logout', 'HomeController@logout');
 
 Route::get('privacy','TermsController@index');
 Route::get('faq','TermsController@faq');
+
+Route::get('add-attendance/{id}','AttendanceController@addAttendance');
+Route::post('attendance','AttendanceController@store');
+Route::get('view-attendance/{id}','AttendanceController@viewAttendance');
+
+
+Route::get('my-class','StudentController@myClass');
+Route::get('att-detail/{id}','StudentController@attDetail');
 });
 
 

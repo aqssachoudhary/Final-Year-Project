@@ -30,6 +30,19 @@ class SessionYearController extends Controller
         return view('session.create', compact('students', 'subjects', 'sections'));
     }
 
+    public function show($id){
+        $subjects=SessionYearSubject::with('subjectDetail')->where('session_years_id',$id)->get();
+        $teachers=User::role('Teacher')->get();
+ return view('session.show', compact('subjects','teachers'));
+    }
+
+    public function assignTeacher($class,$year,$teacher){
+        $subjects=SessionYearSubject::where('id',$class)->first();
+         $subjects->teacher_id=$teacher;
+         $subjects->save();
+         return back()->with('success','Teacher has been assinged');
+    }
+
 public function store(Request $request)
 {
     $validator = $this->validateSessionYear($request->all());

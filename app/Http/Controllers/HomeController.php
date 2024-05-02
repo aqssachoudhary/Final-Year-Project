@@ -12,8 +12,7 @@ use App\Models\SessionYear;
 use App\Charts\studentsChart;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-
-
+use Auth;
 
 class HomeController extends Controller
 {
@@ -25,6 +24,20 @@ class HomeController extends Controller
     public function __construct()
     {
       //  $this->middleware('auth');
+    }
+
+     public function logout(Request $request)
+    {
+    
+      
+    Auth::logout();
+        $request->session()
+            ->invalidate();
+
+        $request->session()
+            ->regenerateToken();
+
+        return redirect('login');
     }
 
     /**
