@@ -7,6 +7,10 @@ use App\Models\User;
 use App\Models\Department;
 use Hash;
 use Spatie\Permission\Models\Role;
+use App\Models\SessionYear;
+use App\Models\SessionYearStudent;
+use App\Models\SessionYearSubject;
+use Auth;
 
 class TeacherController extends Controller
 {
@@ -71,6 +75,11 @@ public function destroy($id)
         $teacher->assignRole($customerRole);
          return redirect('teacher')->with('success','Record Added');
     
+    }
+
+    public function myClasses(){
+         $classes=SessionYearSubject::where('teacher_id',Auth::id())->get();
+         return view('teachers.my_classes',compact('classes'));
     }
    
 }

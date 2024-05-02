@@ -42,7 +42,7 @@
                                                 <td>{{$department->name}}</td>
                                                 <td>
                                                       <h2 class="table-avatar">
-                                                      <a class="avatar avatar-xs" href="#"><img src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
+                                                     
                                                       <a href="#">{{$department->status}}</a>
                                                       </h2>
                                                 </td>

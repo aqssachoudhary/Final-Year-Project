@@ -98,7 +98,31 @@
               </a>
               
             </li>
+               @if(Auth::user()->hasRole('Student'))
+ <li class="menu-title">
+              <span>Classes</span>
+            </li>
+            <li >
+              <a href="{{ url('my-class') }}">
+                <i class="la la-user"></i>
+                <span>My Classes</span>
+              </a>
             
+            </li>
+             @endif
+             @if(Auth::user()->hasRole('Teacher'))
+ <li class="menu-title">
+              <span>Classes</span>
+            </li>
+            <li >
+              <a href="{{ url('my-classes') }}">
+                <i class="la la-user"></i>
+                <span>My Classes</span>
+              </a>
+            
+            </li>
+             @endif
+            @if(Auth::user()->hasRole('Admin'))
             <li class="menu-title">
               <span>Teachers</span>
             </li>
@@ -226,6 +250,10 @@
                   </li>
                   
                 </ul>
+              </li>
+              @endif
+               <li class="menu-title">
+                <span>Account</span>
               </li>
               
               <li >

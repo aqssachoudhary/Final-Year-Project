@@ -30,6 +30,8 @@ Route::post('teacher','TeacherController@store');
 Route::get('teacher/{id}/edit','TeacherController@edit');
 Route::put('teacher/{id}','TeacherController@update');
 Route::delete('teacher/{id}','TeacherController@destroy');
+
+Route::get('my-classes','TeacherController@myClasses');
 //Students
 Route::get('student','StudentController@index');
 Route::get('student/create','StudentController@create');
@@ -81,6 +83,14 @@ Route::get('logout', 'HomeController@logout');
 
 Route::get('privacy','TermsController@index');
 Route::get('faq','TermsController@faq');
+
+Route::get('add-attendance/{id}','AttendanceController@addAttendance');
+Route::post('attendance','AttendanceController@store');
+Route::get('view-attendance/{id}','AttendanceController@viewAttendance');
+
+
+Route::get('my-class','StudentController@myClass');
+Route::get('att-detail/{id}','StudentController@attDetail');
 });
 
 

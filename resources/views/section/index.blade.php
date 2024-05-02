@@ -7,7 +7,7 @@
 <div class="page-header">
 <div class="row">
 <div class="col">
-<h3 class="page-title">Daily Classes</h3>
+<h3 class="page-title">Sections</h3>
 
 </div>
 <div class="col-auto float-end ms-auto">
@@ -28,8 +28,7 @@
 <th>sections</th>
 
 <th>Status</th>
-<th>Edit</th>
-<th>Update</th>
+<th>Action</th>
 
 </tr>
 </thead>
@@ -75,11 +74,7 @@
 <td>
                            <a href="{{url('section/'.$section->id.'/edit')}}" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ordine"><i class="fa fa-pencil"></i>
                            </a>
-                        </td>
-            <td>
-                <td>
-                          
-                                                   <form action="{{ url('section', $section->id) }}" method="POST" id="customer">
+                                <form action="{{ url('section', $section->id) }}" method="POST" id="customer">
                         @csrf
                             @method('DELETE')
  <button type="submit" class="actionBtn mr-1 btn-danger" onclick="return confirm('Are You Sure You Want To Delete?')"><i class="fa fa-trash"></i></button>     
@@ -87,8 +82,8 @@
 
    
                         </form>
-                           
                         </td>
+        
                                             
 
 </tr>
