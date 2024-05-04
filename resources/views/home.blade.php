@@ -5,7 +5,7 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3 class="page-title">Welcome Admin!</h3>
+					<h3 class="page-title">Welcome {{ Auth::user()->first_name }}!</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item active">Dashboard</li>
 					</ul>
@@ -148,7 +148,7 @@
                                                 <td>{{$department->name}}</td>
                                                 <td>
                                                       <h2 class="table-avatar">
-                                                      <a class="avatar avatar-xs" href="profile.html"><img src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
+                                                     
                                                       <a href="#">{{$department->status}}</a>
                                                       </h2>
                                                 </td>

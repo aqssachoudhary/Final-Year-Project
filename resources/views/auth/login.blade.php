@@ -75,9 +75,7 @@
                             <div class="input-block mb-4 text-center">
                                 <button class="btn btn-primary account-btn" type="submit" name="">Login</button>
                             </div>
-                            <div class="account-footer">
-                                <p>Don't have an account yet? <a href="{{ route('register') }}">Register</a></p>
-                            </div>
+                          
                         </form>
 
                     </div>

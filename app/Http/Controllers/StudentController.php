@@ -7,6 +7,11 @@ use App\Models\User;
 use Hash;
 use Spatie\Permission\Models\Role;
 use App\Models\Department;
+use App\Models\SessionYear;
+use App\Models\SessionYearStudent;
+use App\Models\SessionYearSubject;
+use Auth;
+use App\Models\Attendance;
 
 class StudentController extends Controller
 {
@@ -14,6 +19,18 @@ class StudentController extends Controller
     {
         $students=User::role('student')->get();
         return view ('students.index', compact('students'));
+    }
+
+     public function myClass(){
+        $sessionYear=SessionYearStudent::where('student_id',Auth::id())->pluck('session_years_id');
+        $subjects=SessionYearSubject::with('subjectDetail')->whereIn('session_years_id',$sessionYear)->get();
+        return view('students.my_class',compact('subjects'));
+    }
+
+    public function attDetail($id){
+      
+        $dates=Attendance::select('date')->distinct()->where('session_year_subject_id',$id)->get();
+        return view('students.att_detail',compact('dates','id'));
     }
     public function create()
     {
